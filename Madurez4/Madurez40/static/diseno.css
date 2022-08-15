@@ -1,0 +1,49 @@
+.ImagendeMarca{
+    width: 100% !important;
+}
+
+.divTitulo{
+    background-size: cover;
+    width: 200% !important;
+}
+
+.Bienvenido{
+    font-size: 50px;
+    color: black;
+    padding: 0% 20% !important;
+    text-align: center;
+}
+
+.divTextobienvenido{
+    width: 200% !important;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.TextoB{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 0% 20% !important;
+}
+
+.BotonSiguiente{
+    width: 200% !important;
+}
+
+.btn1{
+    font-size: 20px;
+    color: blue;
+    text-align: center;
+    padding: 0% 45% !important;
+}
+
+.UltimaImg{
+    width: 200% !important;
+}
+
+.Imagen{
+    width: 100% !important;
+    height: 100% !important;
+}
