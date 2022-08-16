@@ -2,6 +2,11 @@
     width: 100% !important;
 }
 
+.imgIbisa{
+    width: 50% !important;
+    padding: 0% 45% !important;
+}
+
 .divTitulo{
     background-size: cover;
     width: 200% !important;
