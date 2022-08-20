@@ -1,26 +1,29 @@
 .ImagendeMarca{
-    width: 100% !important;
+    width: auto !important;
+    height: auto;
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 
 .imgIbisa{
     width: 50% !important;
-    padding: 0% 45% !important;
+    padding: 0% 27% !important;
 }
 
 .divTitulo{
     background-size: cover;
-    width: 200% !important;
+    width: 100% !important;
 }
 
 .Bienvenido{
-    font-size: 50px;
+    font-size: 40px;
     color: black;
     padding: 0% 20% !important;
     text-align: center;
 }
 
 .divTextobienvenido{
-    width: 200% !important;
+    width: 100% !important;
     font-size: 20px;
     color: black;
     text-align: center;
@@ -34,7 +37,7 @@
 }
 
 .BotonSiguiente{
-    width: 200% !important;
+    width: 90% !important;
 }
 
 .btn1{
@@ -45,7 +48,7 @@
 }
 
 .UltimaImg{
-    width: 200% !important;
+    width: 100% !important;
 }
 
 .Imagen{
