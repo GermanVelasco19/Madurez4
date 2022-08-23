@@ -37,21 +37,68 @@
 }
 
 .BotonSiguiente{
-    width: 90% !important;
+    padding: 0% 39% !important;
+    font-size: 20px;
+
+}
+.BotonSiguienteTercera{
+    padding: 20% 39% !important;
+    font-size: 50px;
 }
 
 .btn1{
     font-size: 20px;
-    color: blue;
+    color: white;
+    background-color: #2977C5;
     text-align: center;
-    padding: 0% 45% !important;
+    border-radius: 15px;
+    border: 6px solid #2977C5;
 }
 
 .UltimaImg{
     width: 100% !important;
+    padding-top: 20px;
 }
 
 .Imagen{
     width: 100% !important;
     height: 100% !important;
+}
+
+.tituloPag3{
+    color: orange;
+
+}
+
+.DivTextoTercera{
+    padding-top: 20px;
+}
+
+.P1{
+    font-size: 20px;
+    color: black;
+    padding-top:10% !important;
+}
+.P2{
+    font-size: 20px;
+    color: black;
+    padding-top:10% !important;
+}
+.P3{
+    font-size: 20px;
+    color: black;
+    padding-top:10% !important;
+}
+
+.P4{
+    font-size: 20px;
+    color: black;
+    padding-top:10% !important;
+}
+
+.InputTercera{
+    border: 2px solid #2977C5;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 90% !important;
 }
