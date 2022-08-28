@@ -1,28 +1,37 @@
 .ImagendeMarca{
-    width: auto !important;
-    height: auto;
     margin-top: -10px;
     margin-bottom: -10px;
+    text-align: center;
 }
-
 .imgIbisa{
-    width: 50% !important;
-    padding: 0% 27% !important;
+    width: 35%;
+    height: 50%;
+    text-align: center;
 }
-
+.imgJaveriana{
+    width: 35%;
+    height: auto;
+    text-align: center;
+}
+.imgColombia{
+    width: 57px;
+    height: 37px;   
+    border-radius: 5px;
+}
 .divTitulo{
     background-size: cover;
     width: 100% !important;
 }
 
 .Bienvenido{
-    font-size: 40px;
+    font-family: 'Inter';
+    font-size: 40px !important;
     color: black;
-    padding: 0% 20% !important;
     text-align: center;
 }
 
 .divTextobienvenido{
+    font-family: 'Inter';
     width: 100% !important;
     font-size: 20px;
     color: black;
@@ -30,6 +39,7 @@
 }
 
 .TextoB{
+    font-family: 'Inter';
     font-size: 20px;
     color: black;
     text-align: center;
@@ -47,6 +57,7 @@
 }
 
 .btn1{
+    font-family: 'Inter';
     font-size: 20px;
     color: white;
     background-color: #2977C5;
