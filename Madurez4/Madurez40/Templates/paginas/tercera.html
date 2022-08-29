@@ -12,7 +12,7 @@
     <div id="divBarraProgreso">
         <center>
             <div class="text-xs-center" id="progressId"><strong>1 of 19</strong>
-            <progress class="progress3" id = "progressbar" rol="progressbar" value="1" max="19" aria-describedby="progressId">
+            <progress class="progress3" id = "progressbar" rol="progressbar" value="0" max="19" aria-describedby="progressId">
             </progress> 
             </div>
         </center>
@@ -26,13 +26,6 @@
             </strong>
         </h1>
     </div>
-    <div class="DivTextoTercera">
-        <p class="textoPag3">
-            <center>
-                Para comenzar nos gustaría saber más acerca de usted:    
-            </center>
-        </p>
-    </div>
     <div class="PreguntasTercera">
         <div class="P1">
             <center>
@@ -40,10 +33,22 @@
                 <input type="text" class="InputTercera" name="Nombre completo" id="" aria-describedby="NombreCompleto" placeholder="Nombre Completo">
             </center>
         </div>
+        <div class="TextoP31">
+            <center>
+                <p>
+                    Seleccione la industria a la que pertenece:
+                </p>
+            </center>
+        </div>
         <div class="P2">
             <center>
-                <label for="" class="form-label"></label>
-                <input type="text" class="InputTercera" name="Cargo" id="" aria-describedby="Cargo" placeholder="Cargo">
+                <input list="TiposDeIndustria" id="TipoIndustria" placeholder="Industria">
+                    <datalist id="TiposDeIndustria" class="TiposDeIndustria" >
+                        <option>Alimentación, bebida o productos agroindustriales</option>
+                        <option>Textil, Confección</option>
+                        <option>Industria farmaceutica (laboratorios), Cosmetica</option>
+                        <option>Consumer products</option>
+                    </datalist>
             </center>
         </div>
         <div class="P3">

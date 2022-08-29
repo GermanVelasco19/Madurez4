@@ -103,11 +103,7 @@
     color: black;
     padding-top:10% !important;
 }
-.P2{
-    font-size: 20px;
-    color: black;
-    padding-top:10% !important;
-}
+
 .P3{
     font-size: 20px;
     color: black;
@@ -125,4 +121,20 @@
     border-radius: 5px;
     font-size: 20px;
     width: 90% !important;
+}
+
+.TipoIndustria{
+    font-size: 20px;
+    color: black;
+    width: 90% !important;
+}
+
+.TiposDeIndustria{
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 0 0 5px 5px;
+    font-family: "Inter";
+    width: 300% !important;
+    max-height: 10rem;
+    overflow-y: auto;
 }
