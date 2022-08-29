@@ -1,3 +1,16 @@
+.progress3{
+    color: white !important;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.progress3::-webkit-progress-bar {
+    background: white !important;
+    box-sizing: border-box;
+
+}
+.progress3::-webkit-progress-value {
+    background-color: orange !important;
+}
 .ImagendeMarca{
     margin-top: -10px;
     margin-bottom: -10px;
