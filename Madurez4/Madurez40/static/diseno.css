@@ -90,7 +90,7 @@
 }
 
 .tituloPag3{
-    color: orange;
+    color: #056CF2;
     font-family: "Inter";
 }
 
@@ -154,4 +154,18 @@
 .botonRadio{
     font-family: 'Inter';
     padding-top: 5% !important;
+}
+.tituloPag7{
+    color: #FF715A;
+    font-family: "Inter";
+    font-size: 200% !important;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+}
+
+.Pregunta1Septima{
+    color: #FF715A;
+    font-size: 130% !important;
+    width: 90% !important;
+    align-items: left !important;
 }

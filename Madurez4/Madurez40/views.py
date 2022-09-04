@@ -9,4 +9,7 @@ def tercera(request):
     
 def Quinta(request):
     return render(request, 'paginas/Quinta.html')
+
+def Septima(request):
+    return render(request, 'paginas/Septima.html')
 # Create your views here.
