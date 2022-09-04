@@ -12,8 +12,8 @@
     <div id="divBarraProgreso">
         <center>
             <div class="text-xs-center" id="progressId"><strong>1 of 19</strong>
-            <progress class="progress3" id = "progressbar" rol="progressbar" value="0" max="19" aria-describedby="progressId">
-            </progress> 
+                <progress class="progress" rol="progressbar" value="1" max="19" aria-describedby="progressId">
+                </progress> 
             </div>
         </center>
     </div>
@@ -33,36 +33,43 @@
                 <input type="text" class="InputTercera" name="Nombre completo" id="" aria-describedby="NombreCompleto" placeholder="Nombre Completo">
             </center>
         </div>
-        <div class="TextoP31">
+        <center>
+        <div class="TextoP31" id="TextoP31">
             <center>
-                <p>
-                    Seleccione la industria a la que pertenece:
+                <p align="left">
+                    Seleccione la industria a la que pertenece su empresa:
                 </p>
             </center>
         </div>
+        </center>
         <div class="P2">
             <center>
-                <input list="TiposDeIndustria" id="TipoIndustria" placeholder="Industria">
-                    <datalist id="TiposDeIndustria" class="TiposDeIndustria" >
-                        <option>Alimentación, bebida o productos agroindustriales</option>
-                        <option>Textil, Confección</option>
-                        <option>Industria farmaceutica (laboratorios), Cosmetica</option>
-                        <option>Consumer products</option>
-                    </datalist>
+                <select id="TiposDeIndustria" class="TiposDeIndustria" >
+                    <option value="Alimentación, bebida o productos agroindustriales">Alimentación, bebida o productos agroindustriales</option>
+                    <option value="Textil, Confección">Textil, Confección</option>
+                    <option value="Industria farmaceutica (laboratorios), Cosmetica">Industria farmaceutica (laboratorios), Cosmetica</option>
+                    <option value="Consumer products">Consumer products</option>
+                </select>
             </center>
         </div>
+        <center>
+            <div class="TextoP32" id="TextoP32">
+                <center>
+                    <p align="left">
+                        Seleccione el tamaño de su empresa:
+                    </p>
+                </center>
+            </div>
+            </center>
         <div class="P3">
             <center>
-                <label for="" class="form-label"></label>
-                <input type="text" class="InputTercera" name="Telefono" id="" aria-describedby="Telefono" placeholder="Telefono">
+                <select id="tamano" class="tamano">
+                    <option value="Pequeña (Hasta 10.000 MCOP">Pequeña (Hasta 10.000 MCOP</option>
+                    <option value="Mediana (Desde 10.000 MCOP hasta 100.000 MCOP)">Mediana (Desde 10.000 MCOP hasta 100.000 MCOP)</option>
+                    <option valie="Grande (Más de 100.000 MCOP)">Grande (Más de 100.000 MCOP)</option>
+                </select>
             </center>
         </div>  
-        <div class="P4">
-            <center>
-                <label for="" class="form-label"></label>
-                <input type="text" class="InputTercera" name="Correo" id="" aria-describedby="Correo" placeholder="Correo electrónico">
-            </center>
-        </div>
     </div>
     <div class="BotonSiguienteTercera">   
         <center>
