@@ -7,4 +7,6 @@ def inicio(request):
 def tercera(request):
     return render(request, 'paginas/Tercera.html')
     
+def Quinta(request):
+    return render(request, 'paginas/Quinta.html')
 # Create your views here.

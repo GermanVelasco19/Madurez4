@@ -145,3 +145,13 @@
     font-size: 120% !important;
     width: 90% !important;
 }
+.boton{
+    font-family: 'Inter';
+    padding-top: 10% !important;
+    padding-bottom: 10% !important;
+}
+
+.botonRadio{
+    font-family: 'Inter';
+    padding-top: 5% !important;
+}
