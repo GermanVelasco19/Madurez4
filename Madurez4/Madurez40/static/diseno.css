@@ -178,6 +178,20 @@
     width: 90% !important;
     align-items: left !important;
 }
+.tituloPag9{
+    color: #056CF2;
+    font-family: "Inter";
+    font-size: 200% !important;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+}
+.PreguntaNovena{
+    color: #056CF2;
+    font-size: 130% !important;
+    width: 90% !important;
+    align-items: left !important;
+}
+
 .FondoSegunda{
     background-image: url('https://lh3.googleusercontent.com/drive-viewer/AJc5JmQHFWSmYU49yyM_Fj9PXWAQQrJffIyW4c7B6CTCQAXv7fQFf_5dbpbWRuzrEjIssnjXL34vmI0=w1439-h794');
     background-size: 100% 100%;
