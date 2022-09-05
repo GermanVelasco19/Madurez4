@@ -21,5 +21,14 @@ def Sexta(request):
 
 def Septima(request):
     return render(request, 'paginas/Septima.html')
+
+def Novena(request):
+    return render(request, 'paginas/Novena.html')
+
+def Onceava(request):
+    return render(request, 'paginas/Onceava.html')
+
+def Treceava(request):
+    return render(request, 'paginas/Treceava.html')
 # Create your views here.
 

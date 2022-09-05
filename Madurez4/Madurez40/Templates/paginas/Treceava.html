@@ -21,31 +21,25 @@
         <h1 class="tituloPag3">
             <strong>
                 <center>
-                    Datos generales de la empresa
+                    Paso 3: Información para estimar sus  potenciales beneficios.
                 </center>
             </strong>
         </h1>
     </div>
     <div class="PreguntasTercera">
-        <div class="P1">
-            <center>
-                <label for="" class="form-label"></label>
-                <input type="text" class="InputTercera" name="Nombre completo" id="" aria-describedby="NombreCompleto" placeholder="Nombre Completo">
-            </center>
-        </div>
         <center>
-        <div class="TextoP31" id="TextoP31">
-            <center>
-                <p align="left">
-                    Seleccione la industria a la que pertenece su empresa:
-                </p>
-            </center>
-        </div>
+            <div class="TextoP31" id="TextoP31">
+                <center>
+                    <p align="left">
+                        Seleccione el nivel de ingresos del año fiscal pasado en la compañía:
+                    </p>
+                </center>
+            </div>
         </center>
         <div class="P2">
             <center>
                 <select id="TiposDeIndustria" class="TiposDeIndustria" >
-                    <option value="Alimentación, bebida o productos agroindustriales">Alimentación, bebida o productos agroindustriales</option>
+                    <option value="2000000000">2.000.000.000 COP</option>
                     <option value="Textil, Confección">Textil, Confección</option>
                     <option value="Industria farmaceutica (laboratorios), Cosmetica">Industria farmaceutica (laboratorios), Cosmetica</option>
                     <option value="Consumer products">Consumer products</option>
@@ -53,22 +47,43 @@
             </center>
         </div>
         <center>
+            <div class="TextoP31" id="TextoP31">
+                <center>
+                    <p align="left">
+                        ¿Cuál es el costo directo de producción como % de los ingresos ?
+                    </p>
+                </center>
+            </div>
+        </center>
+        <div class="P2">
+            <center>
+                <select id="TiposDeIndustria" class="TiposDeIndustria" >
+                    <option value="20%">Menos de 20%</option>
+                    <option value="40%">Entre 20%-40%</option>
+                    <option value="60%">Entre 40%-60%</option>
+                    <option value="80%">Entre 60%-80%</option>
+                    <option value="100%">Más de 80%</option>
+                </select>
+            </center>
+        </div>
+        <center>
             <div class="TextoP32" id="TextoP32">
                 <center>
                     <p align="left">
-                        Seleccione el tamaño de su empresa:
+                        Desglose el costo directo de producción de su compañia. 
                     </p>
                 </center>
             </div>
             </center>
         <div class="P3">
             <center>
-                <select id="tamano" class="tamano">
+                <select id="CostoDirecto" class="CostoDirecto">
                     <option value="Pequeña (Hasta 10.000 MCOP">Pequeña (Hasta 10.000 MCOP</option>
                     <option value="Mediana (Desde 10.000 MCOP hasta 100.000 MCOP)">Mediana (Desde 10.000 MCOP hasta 100.000 MCOP)</option>
-                    <option valie="Grande (Más de 100.000 MCOP)">Grande (Más de 100.000 MCOP)</option>
+                    <option valie="Otro" selected>Otro</option>
                 </select>
             </center>
+            <input type="text" id="OtroCostoDirecto" class="OtroCostoDirecto" placeholder="Otro valor">
         </div>  
     </div>
     <div class="BotonSiguienteTercera">   
@@ -78,3 +93,14 @@
     </div>
 </body>
 </html>
+
+<script language="JavaScript">
+    document.getElementById("CostoDirecto").onchange = function() {
+        if (this.value == "Otro") {
+            document.getElementById("OtroCostoDirecto").hidden = false;
+        } else {
+            document.getElementById("OtroCostoDirecto").hidden = true;
+        }
+    }
+</script>
+
