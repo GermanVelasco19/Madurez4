@@ -7,6 +7,7 @@ urlpatterns = [
     path('Tercera/', views.tercera, name='Tercera'),
     path('Cuarta/', views.Cuarta, name='Cuarta'),
     path('Quinta/', views.Quinta, name='Quinta'),
+    path('Sexta/', views.Sexta, name='Sexta'),
     path('Septima/', views.Septima, name='Septima'),
 ]
 

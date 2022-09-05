@@ -16,6 +16,9 @@ def Cuarta(request):
 def Quinta(request):
     return render(request, 'paginas/Quinta.html')
 
+def Sexta(request):
+    return render(request, 'paginas/sexta.html')
+
 def Septima(request):
     return render(request, 'paginas/Septima.html')
 # Create your views here.
