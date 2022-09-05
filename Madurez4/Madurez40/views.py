@@ -9,6 +9,9 @@ def segunda(request):
 
 def tercera(request):
     return render(request, 'paginas/Tercera.html')
+
+def Cuarta(request):
+    return render(request, 'paginas/cuarta.html')
     
 def Quinta(request):
     return render(request, 'paginas/Quinta.html')
