@@ -178,3 +178,10 @@
     width: 90% !important;
     align-items: left !important;
 }
+.FondoSegunda{
+    background-image: url('https://lh3.googleusercontent.com/drive-viewer/AJc5JmQHFWSmYU49yyM_Fj9PXWAQQrJffIyW4c7B6CTCQAXv7fQFf_5dbpbWRuzrEjIssnjXL34vmI0=w1439-h794');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 300px;
+
+}
