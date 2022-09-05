@@ -56,7 +56,7 @@
     font-size: 20px;
     color: black;
     text-align: center;
-    padding: 0% 20% !important;
+    padding: 0% 10% !important;
 }
 
 .BotonSiguiente{
@@ -121,6 +121,25 @@
     font-size:100%;
 }
 
+.CostoDirecto{
+    background-color: white;
+    border: 2px solid #2977C5;
+    border-radius: 5px 5px 5px 5px;
+    font-family: "Inter";
+    width: 90% !important;
+    height: 40px;
+    font-size:100%;
+}	
+.OtroCostoDirecto{
+    background-color: white;
+    border: 2px solid #2977C5;
+    border-radius: 5px 5px 5px 5px;
+    font-family: "Inter";
+    width: 80% !important;
+    height: 40px;
+    font-size:90%;
+}
+
 .tamano{
     background-color: white;
     border: 2px solid #2977C5;
@@ -178,6 +197,18 @@
     width: 90% !important;
     align-items: left !important;
 }
+
+.PreguntasQuinta{
+    color: Black !important;
+    font-size: 100% !important;
+    width: 110% !important;
+}
+.PreguntaQuinta{
+    color: Black !important;
+    font-size: 150% !important;
+    width: 110% !important;
+}
+
 .tituloPag9{
     color: #056CF2;
     font-family: "Inter";
@@ -221,3 +252,12 @@
     border-radius: 15px;
     border: 6px solid #FF715A;
 }	
+
+.OtroD{
+    color: black;
+}
+
+.OtroO{
+    color: black;
+    padding-top:5% !important;
+}
