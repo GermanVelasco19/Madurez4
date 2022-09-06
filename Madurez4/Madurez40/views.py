@@ -22,6 +22,9 @@ def Sexta(request):
 def Septima(request):
     return render(request, 'paginas/Septima.html')
 
+def Octava(request) :
+    return render(request, 'paginas/octava.html')
+
 def Novena(request):
     return render(request, 'paginas/Novena.html')
 
