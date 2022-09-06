@@ -9,7 +9,7 @@
 
 }
 .progress3::-webkit-progress-value {
-    background-color: orange !important;
+    background-color: #FF715A !important;
 }
 .ImagendeMarca{
     margin-top: -10px;
@@ -181,6 +181,7 @@
     color: black;
     text-align: center;
     font-weight: bold;
+    margin: 80px
 }
  
 .tituloPag7{
