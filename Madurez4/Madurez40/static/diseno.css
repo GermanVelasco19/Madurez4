@@ -204,6 +204,12 @@
     width: 90% !important;
     align-items: left !important;
 }
+.Pregunta1octava{
+    color: #653BBF;
+    font-size: 130% !important;
+    width: 90% !important;
+    align-items: left !important;
+}
 
 .PreguntasQuinta{
     color: Black !important;
@@ -259,6 +265,15 @@
     border-radius: 15px;
     border: 6px solid #FF715A;
 }	
+.siguiente8{
+    font-family: 'Inter';
+    font-size: 20px;
+    color: white;
+    background-color: #653BBF;
+    text-align: center;
+    border-radius: 15px;
+    border: 6px solid #653BBF;
+}
 
 .OtroD{
     color: black;
