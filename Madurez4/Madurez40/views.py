@@ -34,6 +34,9 @@ def Decima(request):
 def Onceava(request):
     return render(request, 'paginas/Onceava.html')
 
+def Doceava(request):
+    return render(request, 'paginas/Doceava.html')
+
 def Treceava(request):
     return render(request, 'paginas/Treceava.html')
 # Create your views here.
