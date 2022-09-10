@@ -41,3 +41,7 @@ def Treceava(request):
     return render(request, 'paginas/Treceava.html')
 # Create your views here.
 
+def Catorce(request):
+    return render(request, 'paginas/catorce.html')
+    
+
