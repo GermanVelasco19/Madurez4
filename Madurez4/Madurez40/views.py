@@ -28,6 +28,9 @@ def octava(request) :
 def Novena(request):
     return render(request, 'paginas/Novena.html')
 
+def Decima(request):
+    return render(request, 'paginas/decima.html')
+
 def Onceava(request):
     return render(request, 'paginas/Onceava.html')
 
