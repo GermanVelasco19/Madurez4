@@ -11,6 +11,30 @@
 .progress3::-webkit-progress-value {
     background-color: #FF715A !important;
 }
+.animated-progress{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 20px 10px;
+    border: 1px solid rgb(189, 113, 113);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: rgb(255, 251, 251);
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+  }
+  
+  .progress-red span {
+    background-color: red;
+  }
 .ImagendeMarca{
     margin-top: -10px;
     margin-bottom: -10px;
