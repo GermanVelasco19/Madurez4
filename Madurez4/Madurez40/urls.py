@@ -15,7 +15,7 @@ urlpatterns = [
     path('Onceava/', views.Onceava, name='Onceava'),
     path('Doceava/', views.Doceava, name='Doceava'),
     path('Treceava/', views.Treceava, name='Treceava'),  
-    path('Catorce/', viws.Catorce, name='Catorce'),
+    path('Catorce/', views.Catorce, name='Catorce'),
 ]
 
 
