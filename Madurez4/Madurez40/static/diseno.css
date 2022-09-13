@@ -19,7 +19,7 @@
     border: 1px solid rgb(189, 113, 113);
     overflow: hidden;
     position: relative;
-  }
+}
   
   .animated-progress span {
     height: 100%;
@@ -30,15 +30,22 @@
     position: absolute;
     text-align: end;
     padding-right: 5px;
-  }
+}
   
-  .progress-red span {
+.progress-red span {
     background-color: red;
-  }
+}
+
 .ImagendeMarca{
-    margin-top: -10px;
-    margin-bottom: -10px;
-    text-align: center;
+    height: 300px;
+    background-image: url("https://s3-alpha-sig.figma.com/img/1304/fb09/c4351fea517b3f5f79fbf8fee4b945ae?Expires=1664150400&Signature=FhXYJGjOXGrLFJcbDVMfI48DPKK1RufAdk0Mtn~~AYXnVTr2LrvhL5ubCHLwyL0fNCq38QfFWR4hDJ20cNoyYAicyj0KvIW-1RtQr7iJ3fSoeW5a4-wO1l5Q2d9F6yHrgtrVwJo2uUMjDRuA8wfMK4h5~zYGfXxScZKGSmyD55bMXZkYRo6g9VT2vbpM8kH04VophxVBmpFcEe3McNz9uJdPt2GCDlr000JYFnHG3qXPjcEY5DBNQECVKSCq0ay440J9f0s12IV5~TudnWf4IvMiXQrl7kv30XSOv6OFyqSaNvt92pHKZX7DFCiBDcn7M6mtq3ZFnQtBpzr~Nr7-Tg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+    background-size: 400px 300px;
+    background-repeat: no-repeat;
+}
+.TextoDiagnostico{
+    text-align: right !important;
+    margin-left: 50%;
+    font-family: "Inter";
 }
 .imgIbisa{
     width: 35%;
@@ -59,6 +66,9 @@
     background-size: cover;
     width: 100% !important;
 }
+.DivtituloPag3{
+    width: 150% !important;
+}
 
 .Bienvenido{
     font-family: 'Inter';
@@ -77,35 +87,46 @@
 
 .TextoB{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: 15px;
     color: black;
     text-align: center;
     padding: 0% 10% !important;
 }
 
+.TextoB2{
+    font-family: 'Inter';
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    padding: 5% 10% !important;
+}
 .BotonSiguiente{
-    padding: 0% 39% !important;
+    padding: 10% 30% !important;
     font-size: 20px;
 
 }
 .BotonSiguienteTercera{
-    padding: 20% 39% !important;
+    padding: 20% 30% !important;
     font-size: 50px;
 }
-
+.BotonSiguienteQuinta{
+    padding: 20% 50% !important;
+    font-size: 50px;
+}
 .btn1{
     font-family: 'Inter';
     font-size: 20px;
     color: white;
-    background-color: #2977C5;
+    background-color: #FF715A;
     text-align: center;
-    border-radius: 15px;
-    border: 6px solid #2977C5;
+    border-radius: 28px;
+    border: 30px solid #FF715A;
+    border-width: 20px;
 }
 
 .UltimaImg{
     width: 100% !important;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 .Imagen{
@@ -114,7 +135,7 @@
 }
 
 .tituloPag3{
-    color: #056CF2;
+    color: #FF715A;
     font-family: "Inter";
 }
 
@@ -238,7 +259,7 @@
 .PreguntasQuinta{
     color: Black !important;
     font-size: 100% !important;
-    width: 110% !important;
+    width: 140% !important;
 }
 .PreguntaQuinta{
     color: Black !important;
