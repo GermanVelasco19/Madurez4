@@ -48,6 +48,7 @@
     background-repeat: no-repeat;
 }
 .TextoDiagnostico{
+    
     text-align: right !important;
     margin-left: 50%;
     font-family: 'Inter', sans-serif;
@@ -84,6 +85,7 @@
 }
 
 .divTextobienvenido{
+   
     font-family: 'Inter';
     width: 100% !important;
     font-size: 20px;
@@ -92,6 +94,7 @@
 }
 
 .TextoB{
+    
     font-family: 'Inter';
     font-size: 20px;
     color: black;
@@ -100,6 +103,7 @@
 }
 
 .TextoB2{
+    
     font-family: 'Inter';
     font-size: 30px;
     color: black;
@@ -228,6 +232,7 @@
 }
 
 .TextoIndicativo{
+    
     font-family: 'Inter';
     font-size: 30px ;
     color: black;
