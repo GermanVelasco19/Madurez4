@@ -234,10 +234,9 @@
 .TextoIndicativo{
     
     font-family: 'Inter';
-    font-size: 30px ;
+    font-size: 20px ;
     color: black;
     text-align: center;
-    font-weight: bold;
     margin: 100px;
 }
  
@@ -294,10 +293,10 @@
 }
 
 .FondoSegunda{
-    background-image: url('https://lh3.googleusercontent.com/drive-viewer/AJc5JmQHFWSmYU49yyM_Fj9PXWAQQrJffIyW4c7B6CTCQAXv7fQFf_5dbpbWRuzrEjIssnjXL34vmI0=w1439-h794');
+    background-image: url('https://www.industry40-360summit.it/wp-content/themes/Industry40New/assets/images/immagine-home-industry02.png?x69591');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 400px;
 
 }
 .tituloPag6{
