@@ -236,7 +236,7 @@
     margin-left: 20%;
     margin-right: 20%;
     font-family: 'Inter';
-    font-size: 40px ;
+    font-size: 20px ;
     color: black;
     text-align: center;
     margin: 100px;
@@ -346,7 +346,7 @@
     background-image: url('https://lh3.google.com/u/2/d/1j8trxTCSUE2jjYtchuVCXoAvAXxcXLjE=w1439-h768-iv1');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.2);
     height: 300px;
 
 }
