@@ -148,6 +148,8 @@
 .tituloPag3{
     color: #FF715A;
     font-family: "Inter";
+    text-align: center;
+    align-items: center;
 }
 
 .DivTextoTercera{
