@@ -148,8 +148,9 @@
 .tituloPag3{
     color: #FF715A;
     font-family: "Inter";
-    text-align: center;
-    align-items: center;
+    font-size: 200% !important;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
 }
 
 .DivTextoTercera{
