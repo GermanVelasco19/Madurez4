@@ -232,9 +232,11 @@
 }
 
 .TextoIndicativo{
-    
+    text-align: right !important;
+    margin-left: 20%;
+    margin-right: 20%;
     font-family: 'Inter';
-    font-size: 20px ;
+    font-size: 40px ;
     color: black;
     text-align: center;
     margin: 100px;
@@ -293,10 +295,10 @@
 }
 
 .FondoSegunda{
-    background-image: url('https://www.industry40-360summit.it/wp-content/themes/Industry40New/assets/images/immagine-home-industry02.png?x69591');
+    background-image: url('https://i0.wp.com/www.globaltrademag.com/wp-content/uploads/2022/01/shutterstock_1033827553.png?resize=768%2C399&ssl=1');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 500px;
 
 }
 .tituloPag6{
@@ -309,8 +311,9 @@
     color: white;
     background-color: #FF715A;
     text-align: center;
-    border-radius: 15px;
-    border: 6px solid #FF715A;
+    border-radius: 28px;
+    border: 30px solid #FF715A;
+    border-width: 20px;
 }
 .siguiente7{
     font-family: 'Inter';
