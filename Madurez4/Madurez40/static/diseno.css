@@ -295,6 +295,13 @@
     font-size: 130% !important;
     width: 90% !important;
     align-items: left !important;
+    font-family: 'Inter', sans-serif
+}
+.Textobults{
+    color: black;
+    font-size: 100%;
+    font-family: 'Inter', sans-serif;
+
 }
 
 .FondoSegunda{
@@ -357,7 +364,7 @@ input[type="radio"] {
     width: 30px;
     height: 30px;
     border-radius: 15px;
-    border: 2px solid #1FBED6;
+    border: 2px solid #056CF2;
     background-color: white;
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
@@ -368,7 +375,7 @@ input[type="radio"] {
   }
   
   input[type="radio"]:checked { /*no need, if you don't disable default appearance*/
-    background-color: #1FBED6;
+    background-color: #056CF2;
   }
   
   input[type="radio"]:checked ~ span:first-of-type {
@@ -379,7 +386,8 @@ input[type="radio"] {
     position: relative;
     left: -27px;
     font-size: 15px;
-    color: #1FBED6;
+    font-family: 'Inter', sans-serif;
+    color: #056CF2;
   }
   
   label span {
