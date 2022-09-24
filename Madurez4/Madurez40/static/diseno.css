@@ -394,7 +394,19 @@ input[type="radio"] {
     width: 1.2rem;
     margin-right: 0.5rem;
 }
-
+input[type="radio"]:checked~span:first-of-type{
+    color: white;
+}
+label span:first-of-type{
+    position: relative;
+    left: -27px;
+    font-size: 15px;
+    color: #056CF2;
+}
+label span{
+    position: relative;
+    top: -12px;
+}
 #accent {
     accent-color: var(--checked-color);
 }
