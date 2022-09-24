@@ -367,7 +367,7 @@
     height: 300px;
 
 }
-input[type="radio"] {
+input[type="radio"].blue {
     width: 30px;
     height: 30px;
     border-radius: 15px;
@@ -381,13 +381,16 @@ input[type="radio"] {
     outline: none; /*to remove the square border on focus*/
   }
   
-  input[type="radio"]:checked { /*no need, if you don't disable default appearance*/
-    background-color: #056CF2;
+ 
+  input[type="radio"].orange:checked { /*no need, if you don't disable default appearance*/ 
+    background-color: #FF715A;
+    border: 2px solid #FF715A;
   }
   
   input[type="radio"]:checked ~ span:first-of-type {
     color: white;
   }
+  
   
   label span:first-of-type {
     position: relative;
@@ -401,3 +404,16 @@ input[type="radio"] {
     position: relative;
     top: -12px;
   }
+  .buttonblue{
+    background-color: #FF715A;
+  }
+  input[type="radio"].orange {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid #FF715A;
+    background-color: white;
+    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -moz-appearance: none;
+  }
+  
