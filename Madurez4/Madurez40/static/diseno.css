@@ -412,7 +412,7 @@ input[type="radio"].blue {
     height: 30px;
     border-radius: 15px;
     border: 2px solid #FF715A;
-    background-color: white;
+    background-color: rgb(255, 213, 189);
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
   }
