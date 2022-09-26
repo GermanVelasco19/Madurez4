@@ -416,4 +416,8 @@ input[type="radio"].blue {
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
   }
+
+  .spanorange{
+    color: #FF715A;
+  }
   
