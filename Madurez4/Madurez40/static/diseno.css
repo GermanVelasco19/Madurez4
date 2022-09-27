@@ -308,7 +308,11 @@
     color: black;
     font-size: 100%;
     font-family: 'Inter', sans-serif;
-
+}
+.textoSpanesOrange{
+    color: #FF715A;
+    font-size: 70%;
+    font-family: 'Inter', sans-serif;
 }
 
 .FondoSegunda{
@@ -415,6 +419,7 @@ input[type="radio"].blue {
     background-color: rgb(255, 213, 189);
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
+    color: #FF715A;
   }
 
   .spanorange{
