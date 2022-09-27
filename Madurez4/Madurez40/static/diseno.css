@@ -78,7 +78,7 @@
 }
 
 .Bienvenido{
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
     font-size: 40px !important;
     color: black;
     text-align: center;
@@ -86,7 +86,7 @@
 
 .divTextobienvenido{
    
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
     width: 100% !important;
     font-size: 20px;
     color: black;
@@ -95,7 +95,7 @@
 
 .TextoB{
     
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
     font-size: 20px;
     color: black;
     text-align: center;
@@ -104,9 +104,9 @@
 
 .TextoB2{
     
-    font-family: 'Inter', sans-serif
-    font-size: 30px;
-    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size:30px;
+    color:black;
     text-align: center;
     padding: 5% 10% !important;
 }
@@ -151,7 +151,7 @@
     font-size: 200% !important;
     padding-top: 5% !important;
     padding-bottom: 5% !important;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
 }
 
 .DivTextoTercera{
@@ -216,7 +216,7 @@
     font-size: 120% !important;
     width: 90% !important;
     align-items: left !important;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
 }
 .TextoP32{
     color: black;
@@ -224,16 +224,16 @@
     padding-bottom: 5% !important;
     font-size: 120% !important;
     width: 90% !important;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
 }
 .boton{
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
     padding-top: 10% !important;
     padding-bottom: 10% !important;
 }
 
 .botonRadio{
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
     padding-top: 5% !important;
 }
 
@@ -241,7 +241,7 @@
     text-align: right !important;
     margin-left: 20%;
     margin-right: 20%;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
     font-size: 20px ;
     color: black;
     text-align: center;
@@ -250,14 +250,14 @@
  
 .tituloPag7{
     color: #FF715A;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
     font-size: 200% !important;
     padding-top: 5% !important;
     padding-bottom: 5% !important;
 }
 .tituloPag8{
     color: #653BBF;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
     font-size: 200% !important;
     padding-top: 5% !important;
     padding-bottom: 5% !important;
@@ -267,27 +267,27 @@
     font-size: 130% !important;
     width: 90% !important;
     align-items: left !important;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
 }
 .Pregunta1octava{
     color: #653BBF;
     font-size: 130% !important;
     width: 90% !important;
     align-items: left !important;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
 }
 
 .PreguntasQuinta{
     color: Black !important;
     font-size: 100% !important;
     width: 140% !important;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
 }
 .PreguntaQuinta{
     color: Black !important;
     font-size: 150% !important;
     width: 110% !important;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
 }
 
 .tituloPag9{
@@ -302,10 +302,11 @@
     font-size: 130% !important;
     width: 90% !important;
     align-items: left !important;
-    font-family: 'Inter', sans-serif
+    font-family: 'Inter', sans-serif;
 }
 .Textobults{
     color: black;
+    margin-left: 30px;
     font-size: 100%;
     font-family: 'Inter', sans-serif;
 }
@@ -396,10 +397,9 @@ input[type="radio"].blue {
   }
   
   
-  
   label span {
     position: relative;
-    top: -12px;
+    top: -18px;
   }
   .buttonblue{
     background-color: #FF715A;
@@ -408,7 +408,7 @@ input[type="radio"].blue {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    border: 2px solid #FF715A;
+    border: 0px solid #FF715A;
     background-color: rgb(255, 213, 189);
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
@@ -434,12 +434,9 @@ input[type="radio"].blue {
     color: #653BBF
   }
 
-  .spanorange{
-    color: #FF715A;
-}
 label span:first-of-type {
   position: relative;
-  bottom: -30px;
+  margin-top: 20%;
   left: -40px;
   font-size: 20px;
   font-family: 'Inter', sans-serif;
