@@ -40,34 +40,43 @@
         <div class="P1">
             <center>
                 <label for="" class="form-label"></label>
-                <input type="text" class="InputTercera" name="Nombre de la empresa" id="" aria-describedby="NombreEmpresa" placeholder="Nombre de la empresa">
+                <input type="text" class="InputTercera" name="Nombre de la empresa" id="NombreCompleto" aria-describedby="NombreEmpresa" placeholder="Nombre de la empresa" >
             </center>
         </div>
         &nbsp
         <div class="P2">
             <center>
                 <label for="" class="form-label"></label>
-                <input type="text" class="InputTercera" name="Contacto" id="" aria-describedby="Contacto" placeholder="Contacto">
+                <input type="text" class="InputTercera" name="Contacto" id="Contacto" aria-describedby="Contacto" placeholder="Contacto" >
             </center>
         </div>
         &nbsp
         <div class="P3">
             <center>
                 <label for="" class="form-label"></label>
-                <input type="text" class="InputTercera" name="Número de teléfono" id="" aria-describedby="NumeroTelefono" placeholder="Número de teléfono">
+                <input type="text" class="InputTercera" name="Número de teléfono" id="Telefono" aria-describedby="NumeroTelefono" placeholder="Número de teléfono" >
             </center>
         </div>
         &nbsp
         <div class="P3">
             <center>
                 <label for="" class="form-label"></label>
-                <input type="text" class="InputTercera" name="Correo electrónico" id="" aria-describedby="CorreoElectronico" placeholder="Correo Electrónico">
+                <input type="text" class="InputTercera" name="Correo electrónico" id="CorreoElectronico" aria-describedby="CorreoElectronico" placeholder="Correo Electrónico" >
         </div>
 
     </div>
     <div class="BotonSiguiente">   
         <center>
-            <a name="Siguiente" id="siguiente1" class="btn1" href="/Quinta" role="button" style="text-decoration:none">Siguiente</a>
+            <a name="Siguiente" id="siguiente1" class="btn1" href="/Quinta" role="button" style="text-decoration:none" onclick='guardar4()'>Siguiente</a>
         </center>
     </div>
 </body>
+<script language="JavaScript">
+
+    function guardar4() {
+        sessionStorage.setItem('NombreCompleto',document.getElementById("NombreCompleto").value);
+        sessionStorage.setItem('Contacto',document.getElementById("Contacto").value);
+        sessionStorage.setItem('Telefono',document.getElementById("Telefono").value);
+        sessionStorage.setItem('CorreoElectronico',document.getElementById("CorreoElectronico").value);       
+    };
+</script>

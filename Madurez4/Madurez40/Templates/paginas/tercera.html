@@ -75,7 +75,7 @@
     </div>
     <div class="BotonSiguienteTercera">   
         <center>
-            <a name="Siguiente" id="siguiente" class="btn1" href="/Cuarta" role="button" style="text-decoration:none" onclick="guardar3()">Siguiente</a>
+            <a name="Siguiente" id="siguiente" class="btn1" href="/Cuarta" role="button" style="text-decoration:none" onclick='guardar3()' >Siguiente</a>
         </center>
     </div>
 </body>
@@ -84,19 +84,9 @@
 <script language="JavaScript">
 
     function guardar3() {
-        var NombreEmpresa = document.getElementById("NombreEmpresa").value;
-        var TiposDeIndustria = document.getElementById("TiposDeIndustria").value;
-        var tamano = document.getElementById("tamano").value;
-        var data = {
-            "NombreEmpresa": NombreEmpresa,
-            "TiposDeIndustria": TiposDeIndustria,
-            "tamano": tamano
-        }
-        var data = JSON.stringify(data);
-        Empresa.NombreEmpresa = NombreEmpresa;
-        Empresa.TiposDeIndustria = TiposDeIndustria;
-        Empresa.tamano = tamano;
-        console.log(Empresa);
+        sessionStorage.setItem('NombreEmpresa',document.getElementById("NombreEmpresa").value);
+        sessionStorage.setItem('TiposDeIndustria',document.getElementById("TiposDeIndustria").value);
+        sessionStorage.setItem('tamano',document.getElementById("tamano").value);
     };
 </script>
 
