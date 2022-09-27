@@ -30,7 +30,7 @@
         <div class="P1">
             <center>
                 <label for="" class="form-label"></label>
-                <input type="text" class="InputTercera" name="Nombre de la empresa" id="" aria-describedby="NombreCompleto" placeholder="Nombre Completo">
+                <input type="text" key="NombreEmpresa" class="InputTercera" name="Nombre de la empresa" id="NombreEmpresa" aria-describedby="NombreCompleto" placeholder="Nombre Completo">
             </center>
         </div>
         <center>
@@ -44,7 +44,7 @@
         </center>
         <div class="P2">
             <center>
-                <select id="TiposDeIndustria" class="TiposDeIndustria">
+                <select id="TiposDeIndustria" class="TiposDeIndustria" key="TipoIndustria">
                     <option hidden selected > Industria </option>
                     <option value="Alimentación, bebida o productos agroindustriales">Alimentación, bebida o productos agroindustriales</option>
                     <option value="Textil, Confección">Textil, Confección</option>
@@ -64,7 +64,7 @@
             </center>
         <div class="P3">
             <center>
-                <select id="tamano" class="tamano">
+                <select id="tamano" class="tamano" key="TamanoEmpresa">
                     <option hidden selected > Tamaño de su empresa </option>
                     <option value="Pequeña (Hasta 10.000 MCOP">Pequeña (Hasta 10.000 MCOP)</option>
                     <option value="Mediana (Desde 10.000 MCOP hasta 100.000 MCOP)">Mediana (Desde 10.000 MCOP hasta 100.000 MCOP)</option>
@@ -75,8 +75,28 @@
     </div>
     <div class="BotonSiguienteTercera">   
         <center>
-            <a name="Siguiente" id="siguiente3" class="btn1" href="/Cuarta" role="button" style="text-decoration:none">Siguiente</a>
+            <a name="Siguiente" id="siguiente" class="btn1" href="/Cuarta" role="button" style="text-decoration:none" onclick="guardar3()">Siguiente</a>
         </center>
     </div>
 </body>
 </html>
+
+<script language="JavaScript">
+
+    function guardar3() {
+        var NombreEmpresa = document.getElementById("NombreEmpresa").value;
+        var TiposDeIndustria = document.getElementById("TiposDeIndustria").value;
+        var tamano = document.getElementById("tamano").value;
+        var data = {
+            "NombreEmpresa": NombreEmpresa,
+            "TiposDeIndustria": TiposDeIndustria,
+            "tamano": tamano
+        }
+        var data = JSON.stringify(data);
+        Empresa.NombreEmpresa = NombreEmpresa;
+        Empresa.TiposDeIndustria = TiposDeIndustria;
+        Empresa.tamano = tamano;
+        console.log(Empresa);
+    };
+</script>
+

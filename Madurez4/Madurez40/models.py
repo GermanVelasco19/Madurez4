@@ -66,7 +66,7 @@ class Empresa(models.Model):
         ('Grande (100.000MCOP - 1.000.000MCOP)', 'Grande (100.000MCOP - 1.000.000MCOP)'),
     )
     Telefono = models.CharField(max_length=100)
-    Correo = models.CharField(max_length=100)
+    Correo = models.EmailField(max_length=254)
 
     reto1 = models.IntegerField(choices=retos.choices, default=retos.primero)
     reto2 = models.IntegerField(choices=retos.choices, default=retos.segundo)
