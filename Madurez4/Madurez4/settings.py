@@ -12,6 +12,36 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+Empresa = {
+    'nombreEmpresa':'',
+    'nombreCompleto':'',
+    'Cargo':'',
+    'TipodeIndustria':'',
+    'Tamano':'',
+    'telefono':'',
+    'email':'',
+    'valorInventario':'',
+    'NiveldeIngresos':'',
+    'CostoDirectoComoPorcentaje':'',
+    'CostoDirecto':'',
+
+    'reto1':'',
+    'reto2':'',
+
+    'Dimension11':'',
+    'Dimension12':'',
+    'Dimension21':'',
+    'Dimension22':'',
+    'Dimension31':'',
+    'Dimension32':'',
+    'Dimension33':'',
+    'Dimension34':'',
+    'Dimension35':'',
+    'Dimension36':'',
+    'Dimension37':'',
+    'Dimension38':'',
+}
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -63,6 +93,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Madurez40.globales.globales',
             ],
         },
     },
