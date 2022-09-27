@@ -372,8 +372,8 @@
 
 }
 input[type="radio"].blue {
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
     border-radius: 15px;
     border: 2px solid #056CF2;
     background-color: white;
@@ -396,13 +396,6 @@ input[type="radio"].blue {
   }
   
   
-  label span:first-of-type {
-    position: relative;
-    left: -27px;
-    font-size: 15px;
-    font-family: 'Inter', sans-serif;
-    color: #056CF2;
-  }
   
   label span {
     position: relative;
@@ -412,17 +405,45 @@ input[type="radio"].blue {
     background-color: #FF715A;
   }
   input[type="radio"].orange {
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
     border: 2px solid #FF715A;
     background-color: rgb(255, 213, 189);
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
     color: #FF715A;
   }
+  label span:first-of-type {
+    position: relative;
+    left: -40px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #FF715A;
+  }
+  
+
+  input[type="radio"].mora {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #653BBF;
+    background-color: rgb(188, 130, 235);
+    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -moz-appearance: none;
+    color: #653BBF
+  }
 
   .spanorange{
     color: #FF715A;
-  }
+}
+label span:first-of-type {
+  position: relative;
+  bottom: -30px;
+  left: -40px;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #056CF2;
+}
+
   
