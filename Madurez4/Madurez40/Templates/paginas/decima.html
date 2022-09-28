@@ -34,13 +34,13 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                     <label>
-                        <input type="radio"  name="options"/> 
+                        <input type="radio" id="Dimension3P4O1" name="options"/> 
                         <span> 1 </span> <span class="Textobults">No existe modelos digitales para alguna máquina,estación.</span>
                             
                     </label>
                     <br/>
                     <label>
-                        <input type="radio"  name="options"/> 
+                        <input type="radio" id="Dimension3P4O2" name="options"/> 
                             <span>2</span><span class="Textobults">
                                 <ul>
                                 <li >Existen modelos de simulación de la máquina, estación. </li>
@@ -50,7 +50,7 @@
                     </label>
                     <br/>
                     <label>
-                        <input type="radio"  name="options"/> 
+                        <input type="radio" id="Dimension3P4O3"  name="options"/> 
                             <span>3 </span><span class="Textobults"><ul>
                                 <li>Modelo de simulación de la máquina, estación.</li>
                                 <li>Están acoplados en tiempo real a la máquina.</li>
@@ -60,7 +60,7 @@
                     </label>
                     <br/>
                     <label>
-                            <input type="radio"  name="options"/>
+                            <input type="radio" id="Dimension3P4O4" name="options"/>
                             <span>4 </span> <span class="Textobults"><ul>
                                 <P>Todo lo indicado en el punto 3 incluyendo:</p>
                                 <li>Además se realizan simulaciones sincrónicas con la posibilidad de controlar el proceso real.</li>
@@ -74,7 +74,7 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                     <div class="botonRadio">
-                        <input type="checkbox" class="me-2" name="" id="" autocomplete="off">
+                        <input type="checkbox" class="me-2" name="" id="Dimension3P5O1" autocomplete="off">
                             <ul>
                                 <p>No hay trazabilidad del producto o lote de producción, porque no hay datos disponibles.</p>
                                 <li> Trazabilidad del producto o lote de producción con MS Excel y modelos estadisticos ex-post (despues del cierre del mes).</li>
@@ -83,7 +83,7 @@
                             </ul> 
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off"> 
+                        <input type="checkbox" name="" id="Dimension3P5O2" autocomplete="off"> 
                             <ul>
                                 <li>Trazabilidad del producto o lote de producción con MS Excel y modelos estadisticos ex-post (despues del cierre del mes).</li>
                                 <li>Guardamos evidencias en archivos físicos o digitales</li>
@@ -91,14 +91,14 @@
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension3P5O3" autocomplete="off">
                             <ul>
                                 <li>Trazabilidad digital de un producto o lote con datos del ciclo de vida completo: Origen, parametros, costos, cumplimiento  calidad, movimientos logisticos, etc) del producto o lote. </li>
                                 <li>Evidencias en sistema de información.</li>
                             </ul> 
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension3P5O4" autocomplete="off">
                             <ul>
                                 <li>El mismo producto o lote guarda toda la data de su proceso productivo.</li>
                                 <li>Acceso a esta data de manera remota. </li>
@@ -114,8 +114,38 @@
     
     <div class="BotonSiguienteTercera">   
         <center>
-            <a name="Siguiente" id="siguiente3" class="btn1" href="/Onceava" role="button" style="text-decoration:none">Siguiente</a>
+            <a name="Siguiente" id="siguiente3" class="btn1" href="/Onceava" role="button" style="text-decoration:none" onclick='guardar10()'>Siguiente</a>
         </center>
     </div>
 </body>
 </html>
+
+<script language="JavaScript">
+    function guardar10(){
+        Dimension3R4='';
+        Dimension3R5='';
+
+        if(document.getElementById('Dimension3P4O1').checked){
+            Dimension3R4='1';
+        }else if(document.getElementById('Dimension3P4O2').checked){
+            Dimension3R4='2';
+        }else if(document.getElementById('Dimension3P4O3').checked){
+            Dimension3R4='3';
+        }else if(document.getElementById('Dimension3P4O4').checked){
+            Dimension3R4='4';
+        }
+
+        if(document.getElementById('Dimension3P5O1').checked){
+            Dimension3R5='1';
+        }else if(document.getElementById('Dimension3P5O2').checked){
+            Dimension3R5='2';
+        }else if(document.getElementById('Dimension3P5O3').checked){
+            Dimension3R5='3';
+        }else if(document.getElementById('Dimension3P5O4').checked){
+            Dimension3R5='4';
+        }
+
+        sessionStorage.setItem('Dimension3R4',Dimension3R4);
+        sessionStorage.setItem('Dimension3R5',Dimension3R5);
+    }
+</script>

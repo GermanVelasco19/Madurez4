@@ -34,7 +34,7 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                     <label>
-                        <input type="radio"  name="options" class="mora"/>
+                        <input type="radio" id="Dimension2P1O1" name="options" class="mora"/>
                         <span>1</span> <span class=" Textobults">
                         <ul>
                             <li>Se hace proyección de la demanda mediante datos históricos, ajustados por inflación.</li>
@@ -46,7 +46,7 @@
                     </label>
                     <br/>
                     <Label>
-                    <input type="radio"  name="options" class="mora"/>
+                    <input type="radio" id="Dimension2P1O2" name="options" class="mora"/>
                     <span>2</span> <span class=" Textobults">
                          <ul>
                             <li>Herramientas para predecir nivel de ventas (COP), pero no diferenciadas por producto o canal.</li>
@@ -56,7 +56,7 @@
                     </label>
                     <br/>
                     <label>
-                        <input type="radio"  name="options" class="mora"/>
+                        <input type="radio" id="Dimension2P1O3" name="options" class="mora"/>
                     <span>3</span> <span class=" Textobults">
                             <ul>
                                 <li>Proyección de demanda por producto, canal, territorio, clientes específicos.</li>
@@ -66,7 +66,7 @@
                         </label>
                         <br/>
                     <label>
-                        <input type="radio"  name="options" class="mora"/>
+                        <input type="radio" id="Dimension2P1O4" name="options" class="mora"/>
                         <span>4</span> <span class=" Textobults">
                             <ul>
                                 <li>Lo anterior más:</li>
@@ -84,7 +84,7 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                     <label>
-                        <input type="radio"  name="options" class="mora"/>
+                        <input type="radio" name="options" class="mora"/>
                         <span>1</span>
                          <span class="Textobults">
                             <ul>
@@ -93,14 +93,14 @@
                     </label>
                     <br/>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off"> 
+                        <input type="checkbox" name="" id="Dimension2P2O1" autocomplete="off"> 
                             <ul>
                                 <li> No se usan tecnologías 4.0 con los potenciales clientes y mercados. </li>
                     
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension2P2O2" autocomplete="off">
                             <ul>
                                 <p>Estamos estudiando el uso de tecnologías I4.0 como:</p>
                                 <li> Realidad virtual (RV) o Realidad aumentada (RA). </li>
@@ -109,14 +109,14 @@
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension2P2O3" autocomplete="off">
                             <ul>
                                 <li>Estamos implementando una de estas technologías dentro de 12 meses.</li>
                                 
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension2P2O4" autocomplete="off">
                             <ul>
                                 <p>Ya estamos usando exitosamente technologías de I4.0 para comunicar la Propuesta de valor en los mercados:</p>
                                 <li> RV/ RA para enseñar productos y procesos a clientes.</li>
@@ -131,8 +131,38 @@
     </div>
     <div class="BotonSiguienteTercera">   
         <center>
-            <a name="Siguiente" id="siguiente3" class="siguiente8" href="/Novena" role="button" style="text-decoration:none">Siguiente</a>
+            <a name="Siguiente" id="siguiente3" class="siguiente8" href="/Novena" role="button" style="text-decoration:none" onclick='guardar8()'>Siguiente</a>
         </center>
     </div>
 </body>
 </html>
+
+<script language="JavaScript">
+    function guardar8() {
+        Dimension2R1='';
+        Dimension2R2='';
+
+        if (document.getElementById('Dimension2P1O1').checked) {
+            Dimension2R1 = '1';
+        }else if (document.getElementById('Dimension2P1O2').checked) {
+            Dimension2R1 = '2';
+        }else if (document.getElementById('Dimension2P1O3').checked) {
+            Dimension2R1 = '3';
+        }else{
+            Dimension2R1 = '4';
+        }
+
+        if(document.getElementById('Dimension2P2O1').checked){
+            Dimension2R2 = '1';
+        }else if(document.getElementById('Dimension2P2O2').checked){
+            Dimension2R2 = '2';
+        }else if(document.getElementById('Dimension2P2O3').checked){
+            Dimension2R2 = '3';
+        }else{
+            Dimension2R2 = '4';
+        }
+
+        sessionStorage.setItem('Dimension2R1', Dimension2R1);
+        sessionStorage.setItem('Dimension2R2', Dimension2R2);
+    }
+</script>

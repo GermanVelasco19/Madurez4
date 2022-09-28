@@ -34,26 +34,26 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                     <div class="botonRadio">
-                        <input type="checkbox" class="me-2" name="" id="" autocomplete="off"> 
+                        <input type="checkbox" class="me-2" name="" id="Dimension3P6O1" autocomplete="off"> 
                             <ul>
                                 <li>No usamos indicadores del proceso productivo.</li>
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off"> 
+                        <input type="checkbox" name="" id="Dimension3P6O2" autocomplete="off"> 
                             <ul>
                                 <li>Se usan indicadores del proceso, tipo OEE. </li>
                                 <li>Pero no en tiempo real: Se calculan ex-post y manual en MS Excel.</li>
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension3P6O3" autocomplete="off">
                             <ul>
                                 <li> Se calculan indicadores del proceso usando un software.</li>
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension3P6O4" autocomplete="off">
                             <ul>
                                 <li>Se calculan indicadores en tiempo real.</li>
                                 <li>Indicadores como OEE se visualización en pantallas.</li>
@@ -68,14 +68,14 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                     <div class="botonRadio">
-                        <input type="checkbox" class="me-2" name="" id="" autocomplete="off">
+                        <input type="checkbox" class="me-2" name="" id="Dimension3P7O1" autocomplete="off">
                             <ul>
                                 <li>No hay históricos de datos para tomas de decisiones.</li>
                                 <li>Las decisiones toma el operador de turno con base en su experiencia.</li>
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off"> 
+                        <input type="checkbox" name="" id="Dimension3P7O2" autocomplete="off"> 
                             <ul>
                                 <li>Hay datos históricos del proceso e indicadores.</li>
                                 <li>Se usa para planificar la producción con MS Excel. </li>
@@ -83,7 +83,7 @@
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension3P7O3" autocomplete="off">
                             <ul>
                                 <li>Programación de  operaciones con un software especializado para todos los procesos.</li>
                                 <li>Datos históricos e indicadores de eficiencia, que alimentan modelos analíticos de optimización.</li>
@@ -91,7 +91,7 @@
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension3P7O4" autocomplete="off">
                             <ul>
                                 <li>Se calculan indicadores en tiempo real.</li>
                                 <li>Indicadores como OEE se visualización en pantallas.</li>
@@ -106,21 +106,21 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                     <div class="botonRadio">
-                        <input type="checkbox" class="me-2" name="" id="" autocomplete="off">
+                        <input type="checkbox" class="me-2" name="" id="Dimension3P8O1" autocomplete="off">
                             <ul>
                                 <li>Procedimiento generales y controles puntuales: Manuales. </li>
                                 <li>La operación de maquinaria crítica es controlada con procesos como de 10 años?</li>
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension3P8O2" autocomplete="off">
                             <ul>
                                 <li>Existen sensores y alertas en aquellos procesos que tienen riesgos. </li>
                                 <li>Datos sobre eventos NO son capturados o almacenados para su análisis posterior.</li>
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension3P8O3" autocomplete="off">
                             <ul>
                                 <li>Algunos procesos del sistema SST son digitalizados.</li>
                                 <li>Existen sensores y alertas en todos los procesos que tienen algún riesgo.</li>
@@ -129,7 +129,7 @@
                             </ul>
                     </div>
                     <div class="botonRadio">
-                        <input type="checkbox" name="" id="" autocomplete="off">
+                        <input type="checkbox" name="" id="Dimension3P8O4" autocomplete="off">
                             <ul>
                                 <li>Sistema SST completamente digitalizado. </li>
                                 <li>El accesso a instalaciones y a maquinaria critica se rige por flujos digitalizados de autorizaciones, usando huellas digitales, etc.</li>
@@ -144,8 +144,40 @@
     </div>
     <div class="BotonSiguienteTercera">   
         <center>
-            <a name="Siguiente" id="siguiente3" class="btn1" href="/Doceava" role="button" style="text-decoration:none">Siguiente</a>
+            <a name="Siguiente" id="siguiente3" class="btn1" href="/Doceava" role="button" style="text-decoration:none" onclick='guardar11()'>Siguiente</a>
         </center>
     </div>
 </body>
 </html>
+
+<script language="JavaScript">
+    function guardar11(){
+        Dimension3R6='';
+        Dimension3R7='';
+        Dimension3R8='';
+
+        if(document.getElementById('Dimension3P6O1').checked) {
+            Dimension3R6 = 1;
+        }else if(document.getElementById('Dimension3P6O2').checked) {
+            Dimension3R6 = 2;
+        }else if(document.getElementById('Dimension3P6O3').checked) {
+            Dimension3R6 = 3;
+        }else if(document.getElementById('Dimension3P6O4').checked) {
+            Dimension3R6 = 4;
+        }
+
+        if(document.getElementById('Dimension3P7O1').checked) {
+            Dimension3R7 = 1;
+        }else if(document.getElementById('Dimension3P7O2').checked) {
+            Dimension3R7 = 2;
+        }else if(document.getElementById('Dimension3P7O3').checked) {
+            Dimension3R7 = 3;
+        }else if(document.getElementById('Dimension3P7O4').checked) {
+            Dimension3R7 = 4;
+        }
+
+        sessionStorage.setItem('Dimension3R6', Dimension3R6);
+        sessionStorage.setItem('Dimension3R7', Dimension3R7);
+        sessionStorage.setItem('Dimension3R8', Dimension3R8);
+    }
+</script>

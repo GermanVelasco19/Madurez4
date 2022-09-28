@@ -38,7 +38,49 @@
     </div>
     <div class="BotonSiguienteTercera">   
         <center>
-            <a name="VerResumen" id="siguiente3" class="btn2" href="/Treceava" role="button">Ver Resumen</a>
+            <a name="VerResumen" id="siguiente3" class="btn2" href="/Treceava" role="button" onclick='resumen()'>Ver Resumen</a>
         </center>
     </div>
 </body>
+</html>
+
+<script language="JavaScript">
+    function resumen(){
+        var empresa={
+            NombreEmpresa:sessionStorage.getItem('NombreEmpresa'),
+            TiposDeIndustria:sessionStorage.getItem('TiposDeIndustria'),
+            tamano:sessionStorage.getItem('tamano'),
+            NombreCompleto:sessionStorage.getItem('NombreCompleto'),
+            contacto:sessionStorage.getItem('Contacto'),
+            CorreoElectronico:sessionStorage.getItem('CorreoElectronico'),
+            Telefono:sessionStorage.getItem('Telefono'),
+            reto1:sessionStorage.getItem('reto1'),
+            Reto2:sessionStorage.getItem('reto2'),
+
+            Dimension1R1:sessionStorage.getItem('Dimension1R1'),
+            Dimension1R1:sessionStorage.getItem('Dimension1R1'),
+
+            Dimension2R1:sessionStorage.getItem('Dimension2R1'),
+            Dimension2R2:sessionStorage.getItem('Dimension2R2'),
+
+            Dimension3R1:sessionStorage.getItem('Dimension3R1'),
+            Dimension3R2:sessionStorage.getItem('Dimension3R2'),
+            Dimension3R3:sessionStorage.getItem('Dimension3R3'),
+            Dimension3R4:sessionStorage.getItem('Dimension3R4'),
+            Dimension3R5:sessionStorage.getItem('Dimension3R5'),
+            Dimension3R6:sessionStorage.getItem('Dimension3R6'),
+            Dimension3R7:sessionStorage.getItem('Dimension3R7'),
+            Dimension3R8:sessionStorage.getItem('Dimension3R8'),
+
+
+
+            NiveldeIngreso:sessionStorage.getItem('NiveldeIngreso'),
+            CostoDComoPorcentaje:sessionStorage.getItem('CostoDComoPorcentaje'),
+            CostoDirecto:sessionStorage.getItem('CostoDirecto'),
+            valorInv:sessionStorage.getItem('valorInv')
+        };
+
+        var json=JSON.stringify(empresa);
+        console.log(json);
+    }
+</script>
