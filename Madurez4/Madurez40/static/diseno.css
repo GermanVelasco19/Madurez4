@@ -306,7 +306,7 @@
 }
 .Textobults{
     color: black;
-    margin-left: 30px;
+    margin-left: 20px;
     font-size: 100%;
     font-family: 'Inter', sans-serif;
 }
@@ -399,12 +399,12 @@ input[type="radio"].blue {
   
   label span {
     position: relative;
-    top: -18px;
+    top: -10px;
   }
   .buttonblue{
     background-color: #FF715A;
   }
-  input[type="radio"].orange {
+  input[type="radio"].orangeuno{
     width: 50px;
     height: 50px;
     border-radius: 25px;
@@ -414,9 +414,21 @@ input[type="radio"].blue {
     -moz-appearance: none;
     color: #FF715A;
   }
+
+  input[type="radio"].orangedos{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 0px solid #FF715A;
+    background-color: rgb(255, 213, 189);
+    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -moz-appearance: none;
+    color: #FF715A;
+  }
+
   label span:first-of-type {
     position: relative;
-    left: -40px;
+    left: -10px;
     font-size: 20px;
     font-family: 'Inter', sans-serif;
     color: #FF715A;
@@ -434,13 +446,7 @@ input[type="radio"].blue {
     color: #653BBF
   }
 
-label span:first-of-type {
-  position: relative;
-  margin-top: 20%;
-  left: -40px;
-  font-size: 20px;
-  font-family: 'Inter', sans-serif;
-  color: #056CF2;
-}
+  
+
 
   
