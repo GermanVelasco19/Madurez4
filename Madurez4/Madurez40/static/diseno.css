@@ -387,7 +387,11 @@ input[type="radio"].blue {
   }
   
  
-  input[type="radio"].orange:checked { /*no need, if you don't disable default appearance*/ 
+  input[type="radio"].orangeuno:checked { /*no need, if you don't disable default appearance*/ 
+    background-color: #FF715A;
+    border: 2px solid #FF715A;
+  }
+  input[type="radio"].orangedos:checked { /*no need, if you don't disable default appearance*/ 
     background-color: #FF715A;
     border: 2px solid #FF715A;
   }
@@ -426,13 +430,6 @@ input[type="radio"].blue {
     color: #FF715A;
   }
 
-  label span:first-of-type {
-    position: relative;
-    left: -10px;
-    font-size: 20px;
-    font-family: 'Inter', sans-serif;
-    color: #FF715A;
-  }
   
 
   input[type="radio"].mora {
@@ -444,6 +441,23 @@ input[type="radio"].blue {
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
     color: #653BBF
+  }
+  input[type="radio"].azul {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #056CF2;
+    background-color: rgb(112, 143, 245);
+    -webkit-appearance: none; /*to disable the default appearance of radio button*/
+    -moz-appearance: none;
+    color: #056CF2
+  }
+  label span:first-of-type {
+    position: relative;
+    left: -10px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #FF715A;
   }
 
   
