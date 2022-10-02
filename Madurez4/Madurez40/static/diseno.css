@@ -279,14 +279,14 @@
 }
 .Pregunta1Septima{
     color: #FF715A;
-    font-size: 130% !important;
-    width: 90% !important;
-    align-items: left !important;
+    font-size: 20px;
+
+    align-items: left;
     font-family: 'Inter', sans-serif;
 }
 .Pregunta1octava{
     color: #653BBF;
-    font-size: 130% !important;
+    font-size: 20px !important;
     width: 90% !important;
     align-items: left !important;
     font-family: 'Inter', sans-serif;
@@ -324,7 +324,7 @@
 .Textobults{
     color: black;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Inter', sans-serif;
 }
 .textoSpanesOrange{
@@ -369,8 +369,19 @@
     color: white;
     background-color: #653BBF;
     text-align: center;
-    border-radius: 15px;
-    border: 6px solid #653BBF;
+    border-radius: 28px;
+    border: 30px solid #653BBF;
+    border-width: 20px;
+}
+.siguiente9{
+    font-family: 'Inter';
+    font-size: 20px;
+    color: white;
+    background-color: #056CF2;
+    text-align: center;
+    border-radius: 28px;
+    border: 30px solid #056CF2;
+    border-width: 20px;
 }
 
 .OtroD{
