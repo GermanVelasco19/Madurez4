@@ -420,7 +420,7 @@ input[type="radio"].blue {
   
   label span {
     position: relative;
-    top: -20px;
+    
   }
   .buttonblue{
     background-color: #FF715A;
@@ -471,7 +471,8 @@ input[type="radio"].blue {
   }
   label span:first-of-type {
     position: relative;
-    left: -20px;
+    left: 20px;
+    margin-left: 20px;
     font-size: 20px;
     font-family: 'Inter', sans-serif;
     color: #FF715A;
