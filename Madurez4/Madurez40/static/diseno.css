@@ -425,7 +425,11 @@ input[type="radio"].blue {
   }
   input[type="radio"].mora:checked{
     background-color: #653BBF;
-    border: 2px solid #653BBF
+    border: 2px solid #653BBF;
+  }
+  input[type="radio"].azul:checked{
+    background-color: #056CF2;
+    border: 2px solid #056CF2;
   }
   
   input[type="radio"]:checked ~ span:first-of-type {
@@ -444,7 +448,7 @@ input[type="radio"].blue {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    border: 0px solid #FF715A;
+    border: 2px solid #FF715A;
     background-color: rgb(255, 213, 189);
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
@@ -455,7 +459,7 @@ input[type="radio"].blue {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    border: 0px solid #FF715A;
+    border: 2px solid #FF715A;
     background-color: rgb(255, 213, 189);
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
