@@ -256,14 +256,11 @@
 }
 
 .TextoIndicativo{
-    text-align: right !important;
-    margin-left: 20%;
-    margin-right: 20%;
+    text-align: center;
     font-family: 'Inter', sans-serif;
     font-size: 20px ;
     color: black;
-    text-align: center;
-    margin: 100px;
+    align-items: left;
 }
  
 .tituloPag7{
@@ -423,7 +420,7 @@ input[type="radio"].blue {
   
   label span {
     position: relative;
-    top: -10px;
+    top: -20px;
   }
   .buttonblue{
     background-color: #FF715A;
@@ -474,7 +471,7 @@ input[type="radio"].blue {
   }
   label span:first-of-type {
     position: relative;
-    left: -10px;
+    left: -20px;
     font-size: 20px;
     font-family: 'Inter', sans-serif;
     color: #FF715A;
