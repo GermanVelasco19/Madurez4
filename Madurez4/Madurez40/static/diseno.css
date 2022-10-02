@@ -175,10 +175,11 @@
     border: 2px solid #FF715A;
     border-radius: 5px;
     font-family:'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 18px;
     width: 90% !important;
     height: 40px;
     margin-right: 5px;
+    margin-left: 5px;
 }
 
 .TiposDeIndustria{
