@@ -324,7 +324,7 @@
 .Textobults{
     color: black;
     margin-left: 20px;
-    font-size: 100%;
+    font-size: 20px;
     font-family: 'Inter', sans-serif;
 }
 .textoSpanesOrange{
@@ -412,6 +412,10 @@ input[type="radio"].blue {
     background-color: #FF715A;
     border: 2px solid #FF715A;
   }
+  input[type="radio"].mora:checked{
+    background-color: #653BBF;
+    border: 2px solid #653BBF
+  }
   
   input[type="radio"]:checked ~ span:first-of-type {
     color: white;
@@ -457,7 +461,8 @@ input[type="radio"].blue {
     background-color: rgb(188, 130, 235);
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
-    color: #653BBF
+    color: #653BBF;
+    align-content: right;
   }
   input[type="radio"].azul {
     width: 50px;
@@ -472,10 +477,11 @@ input[type="radio"].blue {
   label span:first-of-type {
     position: relative;
     left: 20px;
-    margin-left: 20px;
+    margin-left: -55px;
+    margin-bottom: -20px;
+    margin-top: -50px;
     font-size: 20px;
     font-family: 'Inter', sans-serif;
-    color: #FF715A;
   }
 
   
