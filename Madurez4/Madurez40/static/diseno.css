@@ -137,9 +137,13 @@
     border-width: 20px;
 }
 
-.UltimaImg{
+#UltimaImg{
+    background-image: url("https://lh3.googleusercontent.com/drive-viewer/AJc5JmRWOh6lbivsr-OpzaYaw6b87b_NuslBvODvi5W-FKBIksf_X0qNRSmvvM67F5MObyx88_el6WY=w1008-h795");
+    background-color: rgba(255, 255, 255, 0.112);
+    background-repeat: no-repeat;
     width: 100% !important;
     padding-top: 50px;
+    background-size: 100% 100%;
     
 }
 
@@ -155,6 +159,7 @@
     padding-top: 5% !important;
     padding-bottom: 5% !important;
     font-family: 'Inter', sans-serif;
+    text-align: center;
 }
 
 .DivTextoTercera{
@@ -172,6 +177,7 @@
     font-size: 20px;
     width: 90% !important;
     height: 40px;
+    margin-right: 5px;
 }
 
 .TiposDeIndustria{
@@ -368,10 +374,10 @@
     padding-top:5% !important;
 }
 .Fondo1Abajo{
-    background: linear-gradient(rgba(white,7,12,0.7), rgba(white,7,12,0,7)), url('https://lh3.google.com/u/2/d/1j8trxTCSUE2jjYtchuVCXoAvAXxcXLjE=w1439-h768-iv1');
+    background-image: url(https://lh3.google.com/u/2/d/1j8trxTCSUE2jjYtchuVCXoAvAXxcXLjE=w1439-h768-iv1);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.2);
+ 
     height: 300px;
 
 }
