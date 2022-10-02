@@ -1,4 +1,5 @@
 from decimal import Context
+from urllib.request import Request
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext
@@ -45,6 +46,7 @@ def Treceava(request):
 # Create your views here.
 
 def Catorce(request):
+       
     return render(request, 'paginas/catorce.html')
     
 
