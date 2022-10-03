@@ -195,7 +195,7 @@
 
 .CostoDirecto{
     background-color: white;
-    border: 2px solid #2977C5;
+    border: 2px solid #FF715A;
     border-radius: 5px 5px 5px 5px;
     font-family:  'Inter', sans-serif;
     width: 90% !important;
@@ -204,7 +204,7 @@
 }	
 .OtroCostoDirecto{
     background-color: white;
-    border: 2px solid #2977C5;
+    border: 2px solid #FF715A;
     border-radius: 5px 5px 5px 5px;
     font-family:  'Inter', sans-serif;
     width: 80% !important;
