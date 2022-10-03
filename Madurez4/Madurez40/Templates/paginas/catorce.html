@@ -35,13 +35,13 @@
     </div>
     <div class="BotonSiguienteTercera">   
         <center>
-            <a name="VerResumen" id="siguiente3" class="btn2" href="/Treceava" role="button" onclick='resumen()' method="post">Ver Resumen</a>
+            <a name="VerResumen" id="siguiente3" class="btn2" href="/Treceava" role="button" onclick='resumen()' >Ver Resumen</a>
         </center>
     </div>
 </body>
 </html>
 
-<script type="module" language="JavaScript">
+<script language="JavaScript">
     
     function resumen(){
         var empresa={
@@ -78,7 +78,7 @@
             valorInv:sessionStorage.getItem('valorInv')
         };
 
-        empresa1=Empresa.create(empresa.NombreCompleto,empresa.NombreEmpresa,empresa.TiposDeIndustria,empresa.tamano,empresa.contacto,empresa.CorreoElectronico,empresa.Telefono,empresa.reto1,empresa.Reto2,empresa.Dimension1R1,empresa.Dimension1R2,empresa.Dimension2R1,empresa.Dimension2R2,empresa.Dimension3R1,empresa.Dimension3R2,empresa.Dimension3R3,empresa.Dimension3R4,empresa.Dimension3R5,empresa.Dimension3R6,empresa.Dimension3R7,empresa.Dimension3R8,empresa.NiveldeIngreso,empresa.CostoDComoPorcentaje,empresa.CostoDirecto,empresa.valorInv);
-        console.log(empresa);
+        var json=JSON.stringify(empresa);
+        console.log(json);
     }
 </script>
