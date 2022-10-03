@@ -126,6 +126,7 @@
 .btn-group input, .btn-group label{
     display: inline-block;
     border-bottom-color: #FF715A;
+    margin-left: 20px;
 }
 .btn1{
     font-family: 'Inter';
