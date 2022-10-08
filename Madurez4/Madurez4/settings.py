@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'Madurez40'
 ]
 
@@ -76,8 +77,15 @@ WSGI_APPLICATION = 'Madurez4.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sql',
+        'ENGINE': 'django.db.backends.mysql',
+        'Host': 'localhost',
+        'NAME': 'ibisa',
+        'USER': 'root',
+        'PASSWORD': 'German',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 
