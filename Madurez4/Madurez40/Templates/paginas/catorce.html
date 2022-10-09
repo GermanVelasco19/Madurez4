@@ -35,7 +35,7 @@
     </div>
     <div class="BotonSiguienteTercera">   
         <center>
-            <a name="VerResumen" id="siguiente3" class="btn2" href="/Treceava" role="button" onclick='resumen()' >Ver Resumen</a>
+            <a name="VerResumen" id="siguiente3" class="btn2" role="button" onclick='resumen()' >Ver Resumen</a>
         </center>
     </div>
 </body>
@@ -77,7 +77,7 @@
             CostoDirecto:sessionStorage.getItem('CostoDirecto'),
             valorInv:sessionStorage.getItem('valorInv')
         };
-
+        document.getElementById('siguiente3').href = "/verResumen/"+JSON.stringify(empresa.NombreCompleto)+","+JSON.stringify(empresa.NombreEmpresa)+","+JSON.stringify(empresa.TiposDeIndustria)+","+JSON.stringify(empresa.tamano)+","+JSON.stringify(empresa.contacto)+","+JSON.stringify(empresa.CorreoElectronico)+","+JSON.stringify(empresa.reto1)+","+JSON.stringify(empresa.reto2)+","+","+JSON.stringify(empresa.Dimension1R1)+","+JSON.stringify(empresa.Dimension1R2)+","+JSON.stringify(empresa.Dimension2R1)+","+JSON.stringify(empresa.Dimension2R2)+","+JSON.stringify(empresa.Dimension3R1)+","+JSON.stringify(empresa.Dimension3R2)+","+JSON.stringify(empresa.Dimension3R3)+","+JSON.stringify(empresa.Dimension3R4)+","+JSON.stringify(empresa.Dimension3R5)+","+JSON.stringify(empresa.Dimension3R6)+","+JSON.stringify(empresa.Dimension3R7)+","+JSON.stringify(empresa.Dimension3R8)+","+JSON.stringify(empresa.NiveldeIngreso)+","+JSON.stringify(empresa.CostoDComoPorcentaje)+","+JSON.stringify(empresa.CostoDirecto)+","+JSON.stringify(empresa.valorInv);
         var json=JSON.stringify(empresa);
         console.log(json);
     }

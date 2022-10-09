@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext
 from Madurez40.models import Empresa
+from django.http import JsonResponse
+from django.views import View
 
 def inicio(request):
     return render(request, 'paginas/Inicio.html')
@@ -46,7 +48,20 @@ def Treceava(request):
 # Create your views here.
 
 def Catorce(request):
-       
-    return render(request, 'paginas/catorce.html')
+    return render(request, 'paginas/catorce.html/')
+
+def verResumen(request,NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
+    empresa=Empresa.create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario)
+    
+    return HttpResponse(empresa)
+
+class EmpresasView(View):
+    def get(self, request):
+        empresas = Empresa.objects.values()
+        if len(empresas) > 0:
+            return JsonResponse(list(empresas), safe=False)
+        else:
+            return JsonResponse({"message": "No hay empresas"}, status=404)
+
     
 

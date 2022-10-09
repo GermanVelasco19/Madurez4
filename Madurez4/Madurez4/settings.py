@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6p9wu#s21yo!(t&&!(+!3_(&pg0gf5%k$daxu&)kt0*zj$ou+p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,15 +77,8 @@ WSGI_APPLICATION = 'Madurez4.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'Host': 'localhost',
-        'NAME': 'ibisa',
-        'USER': 'root',
-        'PASSWORD': 'German',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

@@ -26,23 +26,23 @@ class Empresa(models.Model):
     Telefono = models.CharField(max_length=100,default='Telefono')
     Correo = models.EmailField(max_length=254)
 
-    reto1 = models.IntegerField(choices=retos.choices, default=retos.primero)
-    reto2 = models.IntegerField(choices=retos.choices, default=retos.segundo)
+    reto1 = models.PositiveIntegerField(default=1)
+    reto2 = models.PositiveIntegerField(default=2)
 
-    Dimension11= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
-    Dimension12= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)  
+    Dimension11= models.PositiveIntegerField(default=1)
+    Dimension12= models.PositiveIntegerField(default=1)
 
-    Dimension21= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
-    Dimension22= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
+    Dimension21= models.PositiveIntegerField(default=1)
+    Dimension22= models.PositiveIntegerField(default=1)
 
-    Dimension31= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
-    Dimension32= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
-    Dimension33= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
-    Dimension34= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
-    Dimension35= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
-    Dimension36= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
-    Dimension37= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
-    Dimension38= models.IntegerField(choices=Dimension.choices, default=Dimension.primero)
+    Dimension31= models.PositiveIntegerField(default=1)
+    Dimension32= models.PositiveIntegerField(default=1)
+    Dimension33= models.PositiveIntegerField(default=1)
+    Dimension34= models.PositiveIntegerField(default=1)
+    Dimension35= models.PositiveIntegerField(default=1)
+    Dimension36= models.PositiveIntegerField(default=1)
+    Dimension37= models.PositiveIntegerField(default=1)
+    Dimension38= models.PositiveIntegerField(default=1)
 
     NivelIngresos= models.CharField(max_length=500,default='Nivel de ingresos')
     CostoDirectoComoPorcentaje=models.CharField(max_length=500,default='Costo directo como porcentaje')
@@ -50,65 +50,73 @@ class Empresa(models.Model):
 
     valorInventario = models.CharField(max_length=500,default='Valor de inventario')
 
-    def __str__(self):
-        return self.nombreCompleto
+    def _init_(self):
+        self.nombreCompleto = ''
+        self.nombreEmpresa = ''
+        self.Cargo = ''
+        self.TipodeIndustria = ''
+        self.tamañodeEmpresa = ''
+        self.Telefono = ''
+        self.Correo = ''
+        self.reto1 = 1
+        self.reto2 = 2
+        self.Dimension11 = 1
+        self.Dimension12 = 1
+        self.Dimension21 = 1
+        self.Dimension22 = 1
+        self.Dimension31 = 1
+        self.Dimension32 = 1
+        self.Dimension33 = 1
+        self.Dimension34 = 1
+        self.Dimension35 = 1
+        self.Dimension36 = 1
+        self.Dimension37 = 1
+        self.Dimension38 = 1
+        self.NivelIngresos = ''
+        self.CostoDirectoComoPorcentaje = ''
+        self.CostoDirecto = ''
+        self.valorInventario = ''
+
+        return self
     
-    def create(empresa):
-        Empresa.nombreCompleto = empresa.nombreCompleto
-        Empresa.nombreEmpresa = empresa.nombreEmpresa
-        Empresa.Cargo = empresa.Cargo
-        Empresa.TipodeIndustria = empresa.TipodeIndustria
-        Empresa.tamañodeEmpresa = empresa.tamañodeEmpresa
-        Empresa.Telefono = empresa.Telefono
-        Empresa.Correo = empresa.Correo
-        Empresa.reto1 = empresa.reto1
-        Empresa.reto2 = empresa.reto2
-        Empresa.Dimension11 = empresa.Dimension11
-        Empresa.Dimension12 = empresa.Dimension12
-        Empresa.Dimension21 = empresa.Dimension21
-        Empresa.Dimension22 = empresa.Dimension22
-        Empresa.Dimension31 = empresa.Dimension31
-        Empresa.Dimension32 = empresa.Dimension32
-        Empresa.Dimension33 = empresa.Dimension33
-        Empresa.Dimension34 = empresa.Dimension34
-        Empresa.Dimension35 = empresa.Dimension35
-        Empresa.Dimension36 = empresa.Dimension36
-        Empresa.Dimension37 = empresa.Dimension37
-        Empresa.Dimension38 = empresa.Dimension38
-        Empresa.NivelIngresos = empresa.NivelIngresos
-        Empresa.CostoDirectoComoPorcentaje = empresa.CostoDirectoComoPorcentaje
-        Empresa.CostoDirecto = empresa.CostoDirecto
-        Empresa.valorInventario = empresa.valorInventario
+    def create():
+        a = Empresa()
+        Empresa.save(Empresa)
+        return Empresa
+        
+    def create(nombre):
+        Empresa.nombre = nombre
         Empresa.save()
         return Empresa
         
-
     def create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
-        Empresa.nombreCompleto = NombreCompleto
-        Empresa.nombreEmpresa = nombreEmpresa
-        Empresa.Cargo = Cargo
-        Empresa.TipodeIndustria = TipodeIndustria
-        Empresa.tamañodeEmpresa = tamañodeEmpresa
-        Empresa.Telefono = Telefono
-        Empresa.Correo = Correo
-        Empresa.reto1 = reto1
-        Empresa.reto2 = reto2
-        Empresa.Dimension11 = Dimension11
-        Empresa.Dimension12 = Dimension12
-        Empresa.Dimension21 = Dimension21
-        Empresa.Dimension22 = Dimension22
-        Empresa.Dimension31 = Dimension31
-        Empresa.Dimension32 = Dimension32
-        Empresa.Dimension33 = Dimension33
-        Empresa.Dimension34 = Dimension34
-        Empresa.Dimension35 = Dimension35
-        Empresa.Dimension36 = Dimension36
-        Empresa.Dimension37 = Dimension37
-        Empresa.Dimension38 = Dimension38
-        Empresa.NivelIngresos = NivelIngresos
-        Empresa.CostoDirectoComoPorcentaje = CostoDirectoComoPorcentaje
-        Empresa.CostoDirecto = CostoDirecto
-        Empresa.valorInventario = valorInventario
-        Empresa.save()
+        a = Empresa()
+        a.nombreCompleto = NombreCompleto
+        a.nombreEmpresa = nombreEmpresa
+        a.TipodeIndustria = TipodeIndustria
+        a.Cargo = Cargo
+        a.tamañodeEmpresa = tamañodeEmpresa
+        a.Telefono = Telefono
+        a.Correo = Correo
+        a.reto1 = reto1
+        a.reto2 = reto2
+        a.Dimension11 = Dimension11
+        a.Dimension12 = Dimension12
+        a.Dimension21 = Dimension21
+        a.Dimension22 = Dimension22
+        a.Dimension31 = Dimension31
+        a.Dimension32 = Dimension32
+        a.Dimension33 = Dimension33
+        a.Dimension34 = Dimension34
+        a.Dimension35 = Dimension35
+        a.Dimension36 = Dimension36
+        a.Dimension37 = Dimension37
+        a.Dimension38 = Dimension38
+        a.NivelIngresos = NivelIngresos
+        a.CostoDirectoComoPorcentaje = CostoDirectoComoPorcentaje
+        a.CostoDirecto = CostoDirecto
+        a.valorInventario = valorInventario
+        Empresa.save(a)
 
         return Empresa
+        
