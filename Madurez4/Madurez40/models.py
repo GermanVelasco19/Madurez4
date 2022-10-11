@@ -26,8 +26,8 @@ class Empresa(models.Model):
     Telefono = models.CharField(max_length=100,default='Telefono')
     Correo = models.EmailField(max_length=254)
 
-    reto1 = models.PositiveIntegerField(default=1)
-    reto2 = models.PositiveIntegerField(default=2)
+    reto1 = models.CharField(max_length=1000)
+    reto2 = models.CharField(max_length=1000)
 
     Dimension11= models.PositiveIntegerField(default=1)
     Dimension12= models.PositiveIntegerField(default=1)
@@ -81,12 +81,6 @@ class Empresa(models.Model):
     
     def create():
         a = Empresa()
-        Empresa.save(Empresa)
-        return Empresa
-        
-    def create(nombre):
-        Empresa.nombre = nombre
-        Empresa.save()
         return Empresa
         
     def create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
@@ -116,7 +110,6 @@ class Empresa(models.Model):
         a.CostoDirectoComoPorcentaje = CostoDirectoComoPorcentaje
         a.CostoDirecto = CostoDirecto
         a.valorInventario = valorInventario
-        Empresa.save(a)
-
+        a.save()
         return Empresa
         
