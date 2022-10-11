@@ -1,15 +1,6 @@
 from django.db import models
 
 # Create your models here.
-class retos(models.IntegerChoices):
-    primero=1,'1',
-    segundo=2,'2',
-    tercero=3,'3',
-    cuarto=4,'4',
-    quinto=5,'5',
-    sexto=6,'6',
-    septimo=7,'7',
-    octavo=8,'8',
 
 class Dimension(models.IntegerChoices):
     primero=1,'1',
@@ -80,6 +71,7 @@ class Empresa(models.Model):
         return self
     
     def create():
+        a = Empresa._init_()
         a = Empresa()
         return Empresa
         
@@ -111,5 +103,5 @@ class Empresa(models.Model):
         a.CostoDirecto = CostoDirecto
         a.valorInventario = valorInventario
         a.save()
-        return Empresa
+        return a
         
