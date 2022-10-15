@@ -347,10 +347,17 @@
 }
 
 .vectorFondo{
-    background-image: url('https://lh3.google.com/u/2/d/1C-RRGgiPJsRpEUH8iQl48Xpx6kVTSKR3=w1439-h820');
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-estilo-comico-azul-diseno-plano_23-2148797743.jpg?w=2000');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 500px;
+}
+.FondoPuntos{
+    background-image: url('https://lh3.google.com/u/2/d/1C-RRGgiPJsRpEUH8iQl48Xpx6kVTSKR3=w1439-h820-iv1');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+
 }
 .tituloPag6{
     color: #FF715A;
