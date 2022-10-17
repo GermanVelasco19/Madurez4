@@ -143,22 +143,29 @@
 
 .UltimaImg{
    position: relative;
-   height: 100vh;
+   height: 60vh;
    width: 100%;
    display: flex;
    align-items: center;
    justify-content: center;
+   background-image: url("https://lh3.googleusercontent.com/drive-viewer/AJc5JmRWOh6lbivsr-OpzaYaw6b87b_NuslBvODvi5W-FKBIksf_X0qNRSmvvM67F5MObyx88_el6WY=w1008-h795");
+   
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     
 }
-.UltimaImg::before{
-    background-image: url("https://lh3.googleusercontent.com/drive-viewer/AJc5JmRWOh6lbivsr-OpzaYaw6b87b_NuslBvODvi5W-FKBIksf_X0qNRSmvvM67F5MObyx88_el6WY=w1008-h795");
-    background-color: rgba(255, 255, 255, 0.112);
-    background-repeat: no-repeat;
-    width: 100% !important;
+.UltimaImg::after{
+    content: "";
     padding-top: 50px;
-    background-size: 100% 100%;
-    Opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+
 }
+
 
 .Imagen{
     width: 100% !important;
@@ -356,17 +363,27 @@
 
 }
 
-.vectorFondo{
-    background-image: url('https://img.freepik.com/vector-gratis/fondo-estilo-comico-azul-diseno-plano_23-2148797743.jpg?w=2000');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height: 500px;
-}
-.FondoPuntos{
+
+#FondoPuntos{
+    position: relative;
+    left: 100px;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: url('https://lh3.google.com/u/2/d/1C-RRGgiPJsRpEUH8iQl48Xpx6kVTSKR3=w1439-h820-iv1');
-    background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 500px;
+
+}
+#FondoPuntos::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0);
 
 }
 .tituloPag6{
