@@ -35,7 +35,7 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                     <label>
-                        <input type="radio" name="Dim3P6" class="azul" id="Dimension3P6O2"/> 
+                        <input type="radio" name="Dim3P6" class="azul" id="Dimension3P6O1"/> 
                         <span style="color:#056CF2;bottom: 16px;">1</span> 
                         <span class=" Textobults">
                             <ul style="margin-left:60px; margin-top: -60px">
@@ -62,7 +62,7 @@
                         <br/>
                         <br/>
                     <label>
-                        <input type="radio" name="Dim3P6" class="azul" id="Dimension3P6O2"/> 
+                        <input type="radio" name="Dim3P6" class="azul" id="Dimension3P6O3"/> 
                         <span style="color:#056CF2;bottom: 16px;">3</span> 
                         <span class=" Textobults">
                             <ul style="margin-left:60px; margin-top: -60px">
@@ -76,7 +76,7 @@
                         <br/>
 
                     <label>
-                        <input type="radio" name="Dim3P6" class="azul" id="Dimension3P6O2"/> 
+                        <input type="radio" name="Dim3P6" class="azul" id="Dimension3P6O4"/> 
                         <span style="color:#056CF2;bottom: 16px;">4</span> 
                         <span class=" Textobults">
                             <ul style="margin-left:60px; margin-top: -60px">
@@ -97,7 +97,7 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                     <label>
-                        <input type="radio" name="Dim3P7" class="azul" id="Dimension3P6O2"/> 
+                        <input type="radio" name="Dim3P7" class="azul" id="Dimension3P7O1"/> 
                         <span style="color:#056CF2;bottom: 16px;">1</span> 
                         <span class=" Textobults">
                             <ul style="margin-left:60px; margin-top: -60px">
@@ -110,7 +110,7 @@
                         <br/>
                         <br/>
                     <label>
-                        <input type="radio" name="Dim3P7" class="azul" id="Dimension3P6O2"/> 
+                        <input type="radio" name="Dim3P7" class="azul" id="Dimension3P7O2"/> 
                         <span style="color:#056CF2;bottom: 16px;">2</span> 
                         <span class=" Textobults">
                             <ul style="margin-left:60px; margin-top: -60px">
@@ -123,7 +123,7 @@
                     <br/>
                     <br/>
                     <label>
-                        <input type="radio" name="Dim3P7" class="azul" id="Dimension3P6O2"/> 
+                        <input type="radio" name="Dim3P7" class="azul" id="Dimension3P7O3"/> 
                         <span style="color:#056CF2;bottom: 16px;">3</span> 
                         <span class=" Textobults">
                             <ul style="margin-left:60px; margin-top: -60px">
@@ -137,7 +137,7 @@
                         <br/>
 
                     <label>
-                        <input type="radio" name="Dim3P7" class="azul" id="Dimension3P6O2"/> 
+                        <input type="radio" name="Dim3P7" class="azul" id="Dimension3P7O4"/> 
                         <span style="color:#056CF2;bottom: 16px;">4</span> 
                         <span class=" Textobults">
                             <ul style="margin-left:60px; margin-top: -60px">
@@ -228,9 +228,9 @@
 
 <script language="JavaScript">
     function guardar11(){
-        Dimension3R6='';
-        Dimension3R7='';
-        Dimension3R8='';
+        Dimension3R6=0;
+        Dimension3R7=0;
+        Dimension3R8=0;
 
         if(document.getElementById('Dimension3P6O1').checked) {
             Dimension3R6 = 1;
@@ -250,6 +250,16 @@
             Dimension3R7 = 3;
         }else if(document.getElementById('Dimension3P7O4').checked) {
             Dimension3R7 = 4;
+        }
+
+        if(document.getElementById('Dimension3P8O1').checked) {
+            Dimension3R8 = 1;
+        }else if(document.getElementById('Dimension3P8O2').checked) {
+            Dimension3R8 = 2;
+        }else if(document.getElementById('Dimension3P8O3').checked) {
+            Dimension3R8 = 3;
+        }else if(document.getElementById('Dimension3P8O4').checked) {
+            Dimension3R8 = 4;
         }
 
         sessionStorage.setItem('Dimension3R6', Dimension3R6);

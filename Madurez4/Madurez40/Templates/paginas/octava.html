@@ -93,7 +93,7 @@
                 </center>
                 <div class="btn-group" data-bs-toggle="buttons">
                       <label>
-                         <input type="radio" name="Dim2P2" class="mora"/>
+                         <input type="radio" name="Dim2P2O1" class="mora" id="Dim2P2O1"/>
                          <span style="color:#653BBF; bottom: 16px;">1</span>
                          <span class="Textobults">
                             <ul style="margin-left:60px; margin-top: -40px">
@@ -106,7 +106,7 @@
                     <br/>
                     <br/>
                     <label>
-                        <input type="radio" name="Dim2P2" class="mora"/> 
+                        <input type="radio" name="Dim2P2O2" class="mora" id="Dim2P2O2"/> 
                         <span style="color:#653BBF; bottom: 16px;">2</span>
                         <span class="Textobults">
                             <ul style="margin-left:60px; margin-top: -40px">
@@ -120,7 +120,7 @@
                     <br/>
                     <br/>
                     <label>
-                        <input type="radio" name="Dim2P2" class="mora"/>
+                        <input type="radio" name="Dim2P2O3" class="mora" id="Dim2P2O3"/>
                         <span style="color:#653BBF; bottom: 16px;">3</span>
                         <span class="Textobults">
                             <ul style="margin-left:60px; margin-top: -90px">
@@ -135,7 +135,7 @@
                     <br/>
                     <br/>
                     <label>
-                        <input type="radio" name="Dim2P2" class="mora"/>
+                        <input type="radio" name="Dim2P2O4" class="mora" id="Dim2P2O4"/>
                         <span style="color:#653BBF;bottom: 16px;">4</span>
                         <span class="Textobults">
                             <ul style="margin-left:60px; margin-top: -40px">
@@ -148,7 +148,7 @@
                     <br/>
                     <br/>
                     <label>
-                        <input type="radio" name="Dim2P2" class="mora"/>
+                        <input type="radio" name="Dim2P2O5" class="mora" id="Dim2P2O5"/>
                         <span style="color:#653BBF;bottom: 16px;">5</span>
                         <span class="Textobults">
                             <ul style="margin-left:60px; margin-top: -90px">
@@ -174,27 +174,29 @@
 
 <script language="JavaScript">
     function guardar8() {
-        Dimension2R1='';
-        Dimension2R2='';
+        Dimension2R1=0;
+        Dimension2R2=0;
 
         if (document.getElementById('Dimension2P1O1').checked) {
-            Dimension2R1 = '1';
+            Dimension2R1 = 1;
         }else if (document.getElementById('Dimension2P1O2').checked) {
-            Dimension2R1 = '2';
+            Dimension2R1 = 2;
         }else if (document.getElementById('Dimension2P1O3').checked) {
-            Dimension2R1 = '3';
+            Dimension2R1 = 3;
         }else{
-            Dimension2R1 = '4';
+            Dimension2R1 = 4;
         }
 
-        if(document.getElementById('Dimension2P2O1').checked){
-            Dimension2R2 = '1';
-        }else if(document.getElementById('Dimension2P2O2').checked){
-            Dimension2R2 = '2';
-        }else if(document.getElementById('Dimension2P2O3').checked){
-            Dimension2R2 = '3';
+        if(document.getElementById('Dim2P2O1').checked){
+            Dimension2R2 = 1;
+        }else if(document.getElementById('Dim2P2O2').checked){
+            Dimension2R2 = 2;
+        }else if(document.getElementById('Dim2P2O3').checked){
+            Dimension2R2 = 3;
+        }else if(document.getElementById('Dim2P2O4').checked){
+            Dimension2R2 = 4;
         }else{
-            Dimension2R2 = '4';
+            Dimension2R2 = 5;
         }
 
         sessionStorage.setItem('Dimension2R1', Dimension2R1);

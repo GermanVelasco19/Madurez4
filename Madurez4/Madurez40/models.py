@@ -63,10 +63,10 @@ class Empresa(models.Model):
         self.Dimension36 = 1
         self.Dimension37 = 1
         self.Dimension38 = 1
-        self.NivelIngresos = ''
-        self.CostoDirectoComoPorcentaje = ''
-        self.CostoDirecto = ''
-        self.valorInventario = ''
+        self.NivelIngresos = 0
+        self.CostoDirectoComoPorcentaje = 0
+        self.CostoDirecto = 0
+        self.valorInventario = 0
 
         return self
     
