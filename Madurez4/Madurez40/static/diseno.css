@@ -46,13 +46,13 @@
 .ImagendeMarca{
     height: 600px;
     background-image: url("https://lh3.googleusercontent.com/drive-viewer/AJc5JmTewlJ8BJLAnU604vGuWNKThQP7V4TgTA5N9CEQO9gb3RdgvTW5LX0T2KuhuSKH3MpvOAdrr1s=w1439-h820");
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .TextoDiagnostico{
     
     text-align: right !important;
-    margin-left: 50%;
+    
     font-family: 'Inter', sans-serif;
     font-size: 40px;
 }
@@ -119,7 +119,8 @@
 }
 .BotonSiguienteTercera{
     padding: 10% 30% !important;
-    font-size: 50px;
+    font-size: 30px;
+    right: 20px;
 }
 .BotonSiguienteQuinta{
     padding: 20% 50% !important;
@@ -128,11 +129,11 @@
 .btn-group input, .btn-group label{
     display: inline-block;
     border-bottom-color: #FF715A;
-    margin-left: 20px;
+   
 }
 .btn1{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     background-color: #056CF2;
     text-align: center;
@@ -259,7 +260,7 @@
 }
 .TextIndicaciones{
     font-family: 'Inter', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     align-content: left;
     margin-left: 20px;
 }
@@ -364,7 +365,7 @@
 }
 
 
-#FondoPuntos{
+.FondoPuntos{
     position: relative;
     left: 100px;
     height: 60vh;
@@ -376,7 +377,7 @@
     background-repeat: no-repeat;
 
 }
-#FondoPuntos::before{
+.FondoPuntos::before{
     content: "";
     position: absolute;
     top: 0px;
@@ -392,7 +393,7 @@
 }
 .btn2{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     background-color: #FF715A;
     text-align: center;
@@ -411,7 +412,7 @@
 }	
 .siguiente8{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     background-color: #653BBF;
     text-align: center;
@@ -421,7 +422,7 @@
 }
 .siguiente9{
     font-family: 'Inter';
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     background-color: #056CF2;
     text-align: center;
