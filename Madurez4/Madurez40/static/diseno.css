@@ -546,96 +546,207 @@ input[type="radio"].blue {
     font-family: 'Inter', sans-serif;
   } 
 
-  .inputGroup {
-    background-color: #fff;
-    display: block;
-    margin: 10px 0;
+  .toggle{
+    --uiToggleSize: var(--toggleSize, 1.25rem);
+    --uiToggleBorderWidth: var(--toggleBorderWidth, 2px);
+    --uiToggleColor: var(--toggleColor, #FF715A);
+  
+    display: var(--toggleDisplay, inline-flex);
     position: relative;
-
-    label {
-      padding: 12px 30px;
-      width: 100%;
-      display: block;
-      text-align: left;
-      color: #3C454C;
-      cursor: pointer;
-      position: relative;
-      z-index: 2;
-      transition: color 200ms ease-in;
-      overflow: hidden;
-
-      &:before {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        content: '';
-        background-color: #5562eb;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%) scale3d(1, 1, 1);
-        transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        opacity: 0;
-        z-index: -1;
-      }
-
-      &:after {
-        width: 32px;
-        height: 32px;
-        content: '';
-        border: 2px solid #D1D7DC;
-        background-color: #fff;
-        background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
-        background-repeat: no-repeat;
-        background-position: 2px 3px;
-        border-radius: 50%;
-        z-index: 2;
-        position: absolute;
-        right: 30px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        transition: all 200ms ease-in;
-      }
-    }
-
-    input:checked ~ label {
-      color: #fff;
-
-      &:before {
-        transform: translate(-50%, -50%) scale3d(56, 56, 1);
-        opacity: 1;
-      }
-
-      &:after {
-        background-color: #54E0C7;
-        border-color: #54E0C7;
-      }
-    }
-
-    input {
-      width: 32px;
-      height: 32px;
-      order: 1;
-      z-index: 2;
-      position: absolute;
-      right: 30px;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      visibility: hidden;
-    }
   }
+  
+  .toggle__input{
+    /*
+    The pattern by Sara Soueidan https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons/
+    */
+    width: var(--uiToggleSize);
+    height: var(--uiToggleSize);
+    opacity: 0;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  
+  /*
+  1. Calculation of the gap for the custom checkbox
+  */
+  
+  .toggle__label{
+    display: inline-flex;
+    min-height: var(--uiToggleSize);
+    padding-left: calc(var(--uiToggleSize) + var(--toggleIndent, .4em));
+  }
+  
+  .toggle__input:not(:disabled) ~ .toggle__label{
+    cursor: pointer;
+  }
+  
+  /*
+  1. Ems helps to calculate size of the checkbox
+  */
+  
+  .toggle__label::after{
+    content: "";
+    box-sizing: border-box;  
+    width: 1em;
+    height: 1em;
+    font-size: var(--uiToggleSize); /* 1 */
+  
+    background-color: transparent;
+    border: var(--uiToggleBorderWidth) solid var(--uiToggleColor);
+  
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .toggle__input:checked ~ .toggle__label::after{
+    background-color: var(--uiToggleColor);
+  }
+  
+  .toggle__text{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  /*
+  The arrow size and position depends from sizes of square because I needed an arrow correct positioning from the top left corner of the element toggle
+  
+  1. Ems helps to calculate size and position of the arrow
+  */
+  
+  .toggle__label::before{
+    content: "";
+    width: 0;
+    height: 0;
+    font-size: var(--uiToggleSize); /* 1 */
+  
+    border-left-width: 0;
+    border-bottom-width: 0;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-color: var(--toggleArrowColor, #fff);
+  
+    position: absolute;
+    top: .5428em;
+    left: .25em;
+    z-index: 3;
+  
+    transform-origin: left top;
+    transform: rotate(-40deg) skew(10deg);
+  }
+  
+  .toggle__input:checked ~ .toggle__label::before{
+    --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
+  
+    width: .4em;
+    height: .2em;
+    border-left-width: var(--uiToggleArrowWidth);
+    border-bottom-width: var(--uiToggleArrowWidth);
+  }
+  
+  /*
+  States
+  */
+  
+  /* focus state */
+  
+  .toggle:focus-within{
+    outline: var(--toggleOutlineWidthFocus, 3px) solid var(--toggleOutlineColorFocus, #FF715A);
+    outline-offset: var(--toggleOutlineOffsetFocus, 20px);
+  }
+  
+  /* disabled state */
+  
+  .toggle__input:disabled ~ .toggle__label{
+    opacity: var(--toggleOpacityDisabled, .24);
+    cursor: var(--toggleCursorDisabled, not-allowed);
+    user-select: none;
+  }
+  
+  /*
+  =====
+  PRESENTATION STYLES
+  =====
+  */
+  
+  /* 
+  The demo skin
+  */
+  
+  .toggle__label::after{
+    border-radius: var(--toggleBorderRadius, 2px);
+  }
+  
+  /* 
+  The animation of switching states
+  */
+  
+  .toggle__input:not(:disabled) ~ .toggle__label::before{
+    will-change: width, height;
+    opacity: 0;
+  }
+  
+  .toggle__input:not(:disabled):checked ~ .toggle__label::before{
+    opacity: 1;
+    transition: opacity .1s ease-out .15s, width .1s ease-out .3s, height .1s ease-out .2s;
+  }
+  
+  .toggle__input:not(:disabled) ~ .toggle__label::after{
+    will-change: background-color;
+    transition: background-color .15s ease-out;
+  }
+  
+  /*
+  =====
+  SETTINGS
+  =====
+  */
+  
+  .page__custom-settings{
+    --toggleColor: #690e90;
+    --toggleOutlineColorFocus: #690e90;
+    --toggleSize: 2rem;
+  }
+  .page{
+  box-sizing: border-box;
+  max-width: 45rem;
+  padding: 2.75rem 3rem 2.5rem;
+  margin: auto;
+  
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
+  border-radius: 2px;
+}
 
+.page__section{
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 40;
+}
 
+.page__section:nth-child(n+2){
+  margin-top: 3rem;
+}
 
-// codepen formatting
-.form {
-  padding: 0 16px;
-  max-width: 550px;
-  margin: 50px auto;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 36px;
+.page__custom-settings{
+   --pageToggleTextFontSize: 1.25rem;
+}
+
+.page__name{
+  width: 100%;
+}
+
+.page__name::first-letter{
+  text-transform: uppercase;
+}
+
+.page__toggle{
+  margin-top: 1.25rem;
+  margin-right: 1.5rem;
+  font-size: 15px;
 }
 
