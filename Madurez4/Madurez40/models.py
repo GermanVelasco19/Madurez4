@@ -13,7 +13,7 @@ class Empresa(models.Model):
     nombreEmpresa = models.CharField(max_length=500)
     Cargo = models.CharField(max_length=500)
     TipodeIndustria = models.CharField(max_length=500,default='Industria')
-    tamañodeEmpresa = models.CharField(max_length=500,default='Tamaño de la empresa')
+    tamanodeEmpresa = models.CharField(max_length=500,default='Tamaño de la empresa')
     Telefono = models.CharField(max_length=100,default='Telefono')
     Correo = models.EmailField(max_length=254)
 
@@ -46,7 +46,7 @@ class Empresa(models.Model):
         self.nombreEmpresa = ''
         self.Cargo = ''
         self.TipodeIndustria = ''
-        self.tamañodeEmpresa = ''
+        self.tamanodeEmpresa = ''
         self.Telefono = ''
         self.Correo = ''
         self.reto1 = 1
@@ -75,13 +75,13 @@ class Empresa(models.Model):
         a = Empresa()
         return Empresa
         
-    def create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
+    def create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamanodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
         a = Empresa()
         a.nombreCompleto = NombreCompleto
         a.nombreEmpresa = nombreEmpresa
         a.TipodeIndustria = TipodeIndustria
         a.Cargo = Cargo
-        a.tamañodeEmpresa = tamañodeEmpresa
+        a.tamanodeEmpresa = tamanodeEmpresa
         a.Telefono = Telefono
         a.Correo = Correo
         a.reto1 = reto1
