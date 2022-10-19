@@ -608,7 +608,7 @@ input[type="radio"].blue {
   }
   
   .toggle__text{
-    margin-top: auto;
+    margin-top: 10px;
     margin-bottom: auto;
   }
   
@@ -654,10 +654,7 @@ input[type="radio"].blue {
   
   /* focus state */
   
-  .toggle:focus-within{
-    outline: var(--toggleOutlineWidthFocus, 3px) solid var(--toggleOutlineColorFocus, #FF715A);
-    outline-offset: var(--toggleOutlineOffsetFocus, 20px);
-  }
+ 
   
   /* disabled state */
   
