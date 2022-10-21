@@ -465,7 +465,6 @@ def details(request,nombreCompleto):
 
     return HttpResponse(contenido) 
 
-
 class EmpresasView(View):
     def get(self, request):
         empresas = Empresa.objects.values()
