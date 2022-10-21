@@ -45,7 +45,7 @@
                 
                 <div class="page__toggle">
                   <label class="toggle" >
-                 <input  class="toggle__input" type="checkbox" checked />
+                 <input  class="toggle__input" type="checkbox" id="btn1" />
                   <span class="toggle__label" ></span>
                   <br/>
                   <br/>
@@ -59,7 +59,7 @@
               
                 <div class="page__toggle">
                     <label class="toggle" >
-                        <input  class="toggle__input" type="checkbox" checked />
+                        <input  class="toggle__input" type="checkbox" id="btn2" />
                         <span class="toggle__label" ></span>
                           <span class="toggle__text" style="margin-left:40px; margin-top: -60px">Optimizar el uso del recuso humano, al eliminar tareas de poco valor (Ej.: digitalización de información. </span>
                           <br/>
@@ -72,7 +72,7 @@
 
              <div class="page__toggle">
                  <label class="toggle" >
-                    <input  class="toggle__input" type="checkbox" checked />
+                    <input  class="toggle__input" type="checkbox" id="btn3" />
                     <span class="toggle__label" ></span>
                     <span class="toggle__text" style="margin-left:40px; margin-top: -60px">Predicción de eventos críticos o fallas o mantenimiento predictivo.</span>
                     <br/>
@@ -83,7 +83,7 @@
               
                   <div class="page__toggle">
                     <label class="toggle" >
-                       <input  class="toggle__input" type="checkbox" checked />
+                       <input  class="toggle__input" type="checkbox" id="btn4" />
                        <span class="toggle__label" ></span>
                        <span class="toggle__text" style="margin-left:40px; margin-top: -60px"> Reducir el consumo de Utilities: agua, combustible, energia electrica, gas.
                         <br/>
@@ -96,7 +96,7 @@
             
                     <div class="page__toggle">
                         <label class="toggle" >
-                           <input  class="toggle__input" type="checkbox" checked />
+                           <input  class="toggle__input" type="checkbox" id="btn5" />
                            <span class="toggle__label" ></span>
                            <span class="toggle__text" style="margin-left:40px; margin-top: -60px"> Tener trazabilidad del producto sobre todo el ciclo de producción (desde las materias primas hasta el cliente final).
                             <br/>
@@ -109,7 +109,7 @@
             
                         <div class="page__toggle">
                             <label class="toggle" >
-                               <input  class="toggle__input" type="checkbox" checked />
+                               <input  class="toggle__input" type="checkbox" id="btn6" />
                                <span class="toggle__label" ></span>
                                <span class="toggle__text" style="margin-left:40px; margin-top: -60px"> Aumentar los niveles de seguridad y salud en el trabajo (Cero accidentes).
                                 <br/>
@@ -175,7 +175,7 @@
                 reto2 = "Predicción de eventos críticos o fallas o mantenimiento predictivo.";
             }
         }
-        if(document.getElementById("btn6").checked == true){
+        /*if(document.getElementById("btn6").checked == true){
             if (yaUno == false) {
                 reto1 = "Reducir el consumo de Utilities: agua, combustible, energia electrica, gas.";
                 yaUno = true;
@@ -198,7 +198,7 @@
             }else{
                 reto2 = "Aumentar los niveles de seguridad y salud en el trabajo (Cero accidentes).";
             }
-        }
+        }*/
 
         sessionStorage.setItem('reto1', reto1);
         sessionStorage.setItem('reto2', reto2);

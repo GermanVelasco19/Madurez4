@@ -35,7 +35,7 @@ class Empresa(models.Model):
     Dimension37= models.PositiveIntegerField(default=1)
     Dimension38= models.PositiveIntegerField(default=1)
 
-    NivelIngresos= models.CharField(max_length=500,default='Nivel de ingresos')
+    NivelIngresos= models.FloatField(default=0)
     CostoDirectoComoPorcentaje=models.CharField(max_length=500,default='Costo directo como porcentaje')
     CostoDirecto=models.CharField(max_length=500,default='Costo directo')
 
