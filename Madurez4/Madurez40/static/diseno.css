@@ -747,3 +747,7 @@ input[type="radio"].blue {
   font-size: 15px;
 }
 
+.H1Resultados{
+  font-size:500px !important;
+  text-align:center !important;
+}
