@@ -370,7 +370,10 @@ background-repeat: no-repeat;
 height: 500px;
 background-position: right;
 background-position: 150px 80px;
-background-color: rgba(255, 255, 255, 0.5);
+
+}
+.FondoResultados::before{
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -533,7 +536,7 @@ input[type="radio"].blue {
     height: 50px;
     border-radius: 25px;
     border: 2px solid #653BBF;
-    background-color: rgb(188, 130, 235);
+    background-color: rgb(210, 184, 231);
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
     color: #653BBF;
@@ -544,7 +547,7 @@ input[type="radio"].blue {
     height: 50px;
     border-radius: 25px;
     border: 2px solid #056CF2;
-    background-color: rgb(112, 143, 245);
+    background-color: rgb(191, 203, 244);
     -webkit-appearance: none; /*to disable the default appearance of radio button*/
     -moz-appearance: none;
     color: #056CF2
