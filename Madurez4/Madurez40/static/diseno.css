@@ -359,21 +359,22 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 500px;
-    background-color: ;
+    background-color; 
 
 
 }
+
 .FondoResultados{
   background-image: url('https://media.istockphoto.com/photos/industrial-robot-blueprint-picture-id1220366252?k=20&m=1220366252&s=612x612&w=0&h=MHbJNrOupAvgw-agFwdYCuoA7bxM3UZnat_3DW0WMXQ=');
-background-size: 100% 100%;
+background-size: 70% 70%;
 background-repeat: no-repeat;
-height: 500px;
+height: 900px;
 background-position: right;
-background-position: 150px 80px;
+background-position: 600px 200px;
 
 }
 .FondoResultados::before{
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -466,10 +467,12 @@ background-position: 150px 80px;
 
 .ImagenResult{
   background-image: url('https://www.hok.com/wp-content/uploads/2020/07/Oliver-HOK-Voices_2a-2.jpg');
-  background-size: 100% 100%;
+  background-size: 80% 80%;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 500px;
+  background-position:center ;
 }
+
 input[type="radio"].blue {
     width: 70px;
     height: 70px;
