@@ -463,6 +463,13 @@ background-position: 150px 80px;
     height: 300px;
 
 }
+
+.ImagenResult{
+  background-image: url('https://www.hok.com/wp-content/uploads/2020/07/Oliver-HOK-Voices_2a-2.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 300px;
+}
 input[type="radio"].blue {
     width: 70px;
     height: 70px;
