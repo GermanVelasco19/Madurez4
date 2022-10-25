@@ -1,4 +1,5 @@
 from decimal import Context
+from multiprocessing import context
 from urllib.request import Request
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -51,11 +52,9 @@ def Treceava(request):
 def Catorce(request):
     return render(request, 'paginas/catorce.html/')
 
-def Resultados(request):
-    return render(request, 'paginas/Resultados.html/')
-
-def verResumen(request,NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
+def Resultados(request,NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
     empresa=Empresa.create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario)
+    
     empresa=Empresa.objects.get(nombreCompleto=NombreCompleto)
     tipo = empresa.TipodeIndustria
     pares= Empresa.objects.filter(TipodeIndustria=tipo)
@@ -184,82 +183,12 @@ def verResumen(request,NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañ
         BajarCostoLogistica=BajarCostoLogisticamax
 
 
-    
+    context = {
+        'Compania':empresa.nombreEmpresa,
 
-    contenido="""
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    </head>
-    <body>
-        <center><h1>Resultados</h1></center>
-        <h2>Nombre Completo: {}</h2>
-        <h2>Nombre de la empresa: {}</h2>
-        <h2>Tipo de industria a la que pertenece: {}</h2>
-        <h2>Nivel actual de madurez: </h2>
-            <h3>Dimension 1: {}</h3>
-            <h3>Dimension 2: {}</h3>
-            <h3>Dimension 3: {}</h3>
-        <h2>Nivel de madurez de parez: </h2>
-            <h3>Dimension 1: {}</h3>
-            <h3>Dimension 2: {}</h3>
-            <h3>Dimension 3: {}</h3>
-        <h2>Comparacion: </h2>
-            <h3>Dimension 1: {}</h3>
-            <h3>Dimension 2: {}</h3>
-            <h3>Dimension 3: {}</h3>
-        <table class="table table-striped" border="1">
-            <tr>
-                <td>Tipo de potencial</td>
-                <td>Porcentaje</td>
-                <td>COP a COP por anio</td>
-            </tr>
-            <tr>
-                <td>Aumentar Ingresos/Ventas</td>
-                <td>{}%</td>
-                <td>{}</td>
-            </tr>
-            <tr>
-                <td>Bajar costo de produccion</td>
-                <td>{}%</td>
-                <td>{}</td>
-            </tr>
-            <tr>
-                <td>Ahorro en materiales/materia prima</td>
-                <td>{}%</td>
-                <td>{}</td>
-            </tr>
-            <tr>
-                <td>Ahorrar en mano de obra</td>
-                <td>{}%</td>
-                <td>{}</td>
-            </tr>
-            <tr>
-                <td>Ahorro en servicios de terceros & Mantenimiento</td>
-                <td>{}%</td>
-                <td>{}</td>
-            </tr>
-            <tr>
-                <td>Ahorro en servicios publicos: Electricidad,Combustible,Gas,etc.</td>
-                <td>{}%</td>
-                <td>{}</td>
-            </tr>
-            <tr>
-                <td>Bajar costo de logistica & inventario</td>
-                <td>{}%</td>
-                <td>{}</td>
-            </tr>
-        </table>
+    }
 
-        <h2> Retos escogidos por la empresa: </h2>
-        <h3> Reto1: {}</h3>
-        <h3> Reto2: {}</h3>
-    </body>
-
-    """.format(empresa.nombreCompleto,empresa.nombreEmpresa,empresa.TipodeIndustria,nivelActual[0],nivelActual[1],nivelActual[2],Dimension1,Dimension2,Dimension3,nivelMadurez,nivelMadurez,nivelMadurez,AumentarIngresos*100,AumentarIngresos*empresa.NivelIngresos,BajarCostoProduccion*100,BajarCostoProduccion*empresa.NivelIngresos,AhorroMateriales*100,AhorroMateriales*empresa.NivelIngresos,AhorroManoObra*100,empresa.NivelIngresos,AhorroServTerceros*100,AhorroServTerceros*empresa.NivelIngresos,AhorroServPublicos*100,AhorroServPublicos*empresa.NivelIngresos,BajarCostoLogistica*100,BajarCostoLogistica*empresa.NivelIngresos,empresa.reto1,empresa.reto2)
-
-    return HttpResponse(contenido) 
+    return render(request,'paginas/Resultados.html', context=context)
 
 def details(request,nombreCompleto):
     empresa=Empresa.objects.get(nombreCompleto=nombreCompleto)

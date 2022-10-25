@@ -16,8 +16,8 @@ urlpatterns = [
     path('Doceava/', views.Doceava, name='Doceava'),
     path('Treceava/', views.Treceava, name='Treceava'),  
     path('Catorce/', views.Catorce, name='Catorce'),
-    path('Resultados/', views.Resultados, name='Resultados'),
-    path('verResumen/<str:NombreCompleto>/<str:nombreEmpresa>/<str:Cargo>/<str:TipodeIndustria>/<str:tamañodeEmpresa>/<str:Telefono>/<str:Correo>/<str:reto1>/<str:reto2>/<str:Dimension11>/<str:Dimension12>/<str:Dimension21>/<str:Dimension22>/<str:Dimension31>/<str:Dimension32>/<str:Dimension33>/<str:Dimension34>/<str:Dimension35>/<str:Dimension36>/<str:Dimension37>/<str:Dimension38>/<str:NivelIngresos>/<str:CostoDirectoComoPorcentaje>/<str:CostoDirecto>/<str:valorInventario>/', views.verResumen, name='verResumen'),
+    #path('Resultados/', views.Resultados, name='Resultados'),
+    path('Resultados/<str:NombreCompleto>/<str:nombreEmpresa>/<str:Cargo>/<str:TipodeIndustria>/<str:tamañodeEmpresa>/<str:Telefono>/<str:Correo>/<str:reto1>/<str:reto2>/<str:Dimension11>/<str:Dimension12>/<str:Dimension21>/<str:Dimension22>/<str:Dimension31>/<str:Dimension32>/<str:Dimension33>/<str:Dimension34>/<str:Dimension35>/<str:Dimension36>/<str:Dimension37>/<str:Dimension38>/<str:NivelIngresos>/<str:CostoDirectoComoPorcentaje>/<str:CostoDirecto>/<str:valorInventario>/', views.Resultados, name='Resultados'),
     path('Empresas/', views.EmpresasView.as_view(), name='Empresas'),
     path('details/<str:nombreCompleto>',views.details, name='details'),
 ]
