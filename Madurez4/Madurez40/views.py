@@ -54,7 +54,19 @@ def Catorce(request):
 
 def Resultados(request,NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
     empresa=Empresa.create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario)
+    return resultados(request,NombreCompleto)
     
+
+class EmpresasView(View):
+    def get(self, request):
+        empresas = Empresa.objects.values()
+        if len(empresas) > 0:
+            return JsonResponse(list(empresas), safe=False)
+        else:
+            return JsonResponse({"message": "No hay empresas"}, status=404)
+
+    
+def resultados(request,NombreCompleto):
     empresa=Empresa.objects.get(nombreCompleto=NombreCompleto)
     tipo = empresa.TipodeIndustria
     pares= Empresa.objects.filter(TipodeIndustria=tipo)
@@ -192,14 +204,3 @@ def Resultados(request,NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañ
     }
 
     return render(request,'paginas/Resultados.html', context=context)
-
-class EmpresasView(View):
-    def get(self, request):
-        empresas = Empresa.objects.values()
-        if len(empresas) > 0:
-            return JsonResponse(list(empresas), safe=False)
-        else:
-            return JsonResponse({"message": "No hay empresas"}, status=404)
-
-    
-
