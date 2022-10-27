@@ -289,6 +289,7 @@ def resultados(request,NombreCompleto):
 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     
 
