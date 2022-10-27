@@ -306,3 +306,6 @@ class EmpresasView(View):
 =======
     return render(request,'paginas/Resultados.html', context=context)
 >>>>>>> ce721a2289018bbe2728a1341e3ab1e95759ce9a
+=======
+    return render(request,'paginas/Resultados.html', context=context)
+>>>>>>> ce721a2289018bbe2728a1341e3ab1e95759ce9a
