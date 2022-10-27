@@ -36,10 +36,10 @@ class Empresa(models.Model):
     Dimension38= models.PositiveIntegerField(default=1)
 
     NivelIngresos= models.FloatField(default=0)
-    CostoDirectoComoPorcentaje=models.CharField(max_length=500,default='Costo directo como porcentaje')
-    CostoDirecto=models.CharField(max_length=500,default='Costo directo')
+    CostoDirectoComoPorcentaje=models.FloatField(default=0)
+    CostoDirecto=models.FloatField(default=0)
 
-    valorInventario = models.CharField(max_length=500,default='Valor de inventario')
+    valorInventario = models.FloatField(default=0)
 
     def _init_(self):
         self.nombreCompleto = ''

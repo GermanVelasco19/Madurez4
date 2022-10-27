@@ -1,6 +1,7 @@
 from decimal import Context
 from multiprocessing import context
 from urllib.request import Request
+from xml.dom.minidom import Document
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext
@@ -8,6 +9,8 @@ from Madurez40.models import Empresa
 from django.http import JsonResponse
 from django.views import View
 import matplotlib.pyplot as plt
+
+tipo=""
 
 def inicio(request):
     return render(request, 'paginas/Inicio.html')
@@ -18,7 +21,9 @@ def segunda(request):
 def tercera(request):
     return render(request, 'paginas/Tercera.html')
 
-def Cuarta(request):
+def Cuarta(request,TipoInustria):
+    global tipo
+    tipo=TipoInustria
     return render(request, 'paginas/cuarta.html')
     
 def Quinta(request):
@@ -46,7 +51,54 @@ def Doceava(request):
     return render(request, 'paginas/Doceava.html')
 
 def Treceava(request):
-    return render(request, 'paginas/Treceava.html')
+    global tipo
+    empresas = Empresa.objects.filter(TipodeIndustria=tipo)
+    OtroCostoDirecto=0
+    valorInv=0
+    Costo=0
+    Ingreso=0
+
+    print(tipo)
+    for i in empresas:
+        valorInv+=i.valorInventario
+        OtroCostoDirecto+=i.CostoDirecto
+        Costo+=i.CostoDirectoComoPorcentaje
+        Ingreso+=i.NivelIngresos
+    
+    if len(empresas)>0:
+        valorInv=valorInv/len(empresas)
+        OtroCostoDirecto=OtroCostoDirecto/len(empresas)
+        Costo=Costo/len(empresas)
+        Ingreso=Ingreso/len(empresas)
+        
+    millones=round(Ingreso/1000000)
+    miles=round((Ingreso-millones*1000000)/1000)
+    if miles<99:
+        if miles<9:
+            milesS="00"+str(miles)
+        else:
+            milesS="0"+str(miles)
+    else:
+        milesS=str(miles)
+    unidades=round(Ingreso-millones*1000000-miles*1000)
+    if unidades<99:
+        if unidades<9:
+            unidadesS="00"+str(unidades)
+        else:
+            unidadesS="0"+str(unidades)
+    else:
+        unidadesS=str(unidades)
+
+    IngresoParaMostrar="{}.{}.{} COP".format(millones,milesS,unidadesS)
+    context={
+        'ValordeInv':round(100*valorInv),
+        'CostoDirecto':round(OtroCostoDirecto),
+        'CostoDComoPorcentaje':round(100*Costo),
+        'Ingreso':round(Ingreso),
+        'IngresoParaMostrar':IngresoParaMostrar
+    }
+    
+    return render(request, 'paginas/Treceava.html', context=context)
 # Create your views here.
 
 def Catorce(request):

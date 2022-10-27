@@ -41,8 +41,9 @@
             <center>
                 <select id="NiveldeIngreso" class="TiposDeIndustria" >
                     <option value="2000000000">2.000.000.000 COP</option>
-                    <option value="0"> Menos de 2.000.000.000 COP</option>
+                    <option value={{Ingreso}}> Menos de 2.000.000.000 COP</option>
                     <option value="3000000000">Más de 2.000.000.000 COP</option>
+                    <option value={{Ingreso}}>Valor promedio de la industria: {{IngresoParaMostrar}}</option>
                 </select>
             </center>
         </div>
@@ -58,11 +59,12 @@
         <div class="P2">
             <center>
                 <select id="CostoDComoPorcentaje" class="TiposDeIndustria" >
-                    <option value="0.2">Menos de 20%</option>
-                    <option value="0.4">Entre 20%-40%</option>
-                    <option value="0.6">Entre 40%-60%</option>
-                    <option value="0.8">Entre 60%-80%</option>
-                    <option value="1">Más de 80%</option>
+                    <option value="20">Menos de 20%</option>
+                    <option value="40">Entre 20%-40%</option>
+                    <option value="60">Entre 40%-60%</option>
+                    <option value="80">Entre 60%-80%</option>
+                    <option value="100">Más de 80%</option>
+                    <option value={{CostoDComoPorcentaje}} select>Valor promedio de la industria: {{CostoDComoPorcentaje}}%</option>
                 </select>
             </center>
         </div>
@@ -79,9 +81,10 @@
             <div class="OtroD">
                 <center>
                     <select id="CostoDirecto" class="CostoDirecto">
-                        <option value="0.1">Menos de 10%</option>
-                        <option value="0.3">Entre 10%-30%</option>
-                        <option value="Otro" selected>Otro</option>
+                        <option value="10">Menos de 10%</option>
+                        <option value="30">Entre 10%-30%</option>
+                        <option value="Otro" >Otro</option>
+                        <option value={{CostoDirecto}} selected>Valor promedio de la industria: {{CostoDirecto}}%</option>
                     </select>
                     <br>
                     <div class="OtroO">
@@ -103,11 +106,12 @@
             <div class="P3">
                 <center>
                     <select id="ValordeInv" class="TiposDeIndustria">
-                        <option value="0.1">Menos del 10%</option>
-                        <option value="0.3">Entre 11%-30%</option>
-                        <option value="0.4">Entre 31%-40%</option>
-                        <option value="0.5">Entre 41%-50%</option>
-                        <option valie="1" selected>Más del 50%</option>
+                        <option value="10">Menos del 10%</option>
+                        <option value="30">Entre 11%-30%</option>
+                        <option value="40">Entre 31%-40%</option>
+                        <option value="50">Entre 41%-50%</option>
+                        <option value="100">Más del 50%</option>
+                        <option value={{ValordeInv}} selected>Valor promedio de la industria: {{ValordeInv}}%</option>
                     </select>
                 </center>
             </div>  
@@ -142,9 +146,9 @@
         }
 
         sessionStorage.setItem('NiveldeIngreso', NiveldeIngreso);
-        sessionStorage.setItem('CostoDComoPorcentaje', CostoDComoPorcentaje);
-        sessionStorage.setItem('CostoDirecto', CostoDirecto);
-        sessionStorage.setItem('valorInv', valorInv);
+        sessionStorage.setItem('CostoDComoPorcentaje', CostoDComoPorcentaje/100);
+        sessionStorage.setItem('CostoDirecto', CostoDirecto/100);
+        sessionStorage.setItem('valorInv', valorInv/100);
     }
 </script>
 
