@@ -135,40 +135,6 @@ def resultados(request,NombreCompleto):
     Dimension3=sum(promedioDimension3)/len(promedioDimension3)
 
     nivelActual=[(empresa.Dimension11+empresa.Dimension12)/2,(empresa.Dimension21+empresa.Dimension22)/2,(empresa.Dimension31+empresa.Dimension32+empresa.Dimension33+empresa.Dimension34+empresa.Dimension35+empresa.Dimension36+empresa.Dimension37+empresa.Dimension38)/8]
-    Dimension1Comparado=0
-    Dimension2Comparado=0
-    Dimension3Comparado=0
-
-    if nivelActual[0]>Dimension1:
-        Dimension1Comparado=1
-    elif nivelActual[0]<Dimension1:
-        Dimension1Comparado=-1
-    else:
-        Dimension1Comparado=0
-
-    if nivelActual[1]>Dimension2:
-        Dimension2Comparado=1   
-    elif nivelActual[1]<Dimension2:
-        Dimension2Comparado=-1
-    else:
-        Dimension2Comparado=0
-
-    if nivelActual[2]>Dimension3:
-        Dimension3Comparado=1
-    elif nivelActual[2]<Dimension3:
-        Dimension3Comparado=-1
-    else:
-        Dimension3Comparado=0
-    nivelMadurez=''
-
-    if Dimension1Comparado ==1 and Dimension2Comparado==1 and Dimension3Comparado==1:
-        nivelMadurez="Mejores que parez"
-    elif Dimension1Comparado ==0 and Dimension2Comparado==0 and Dimension3Comparado==0:
-        nivelMadurez="Igual que parez"
-    elif Dimension1Comparado ==-1 and Dimension2Comparado==-1 and Dimension3Comparado==-1:
-        nivelMadurez="Peores que parez"
-    else:
-        nivelMadurez="En algunas dimension mejor que parez y en otras peor"
     
     ImplementacionEstrategiaTransformacion=[0.03,0.02,0.01,0]
     CulturaDigital=[0.03,0.02,0.01,0]
@@ -246,12 +212,78 @@ def resultados(request,NombreCompleto):
     elif BajarCostoLogistica>BajarCostoLogisticamax:
         BajarCostoLogistica=BajarCostoLogisticamax
 
+    if(round(AumentarIngresos,2)==AumentarIngresosmin):
+        min=round(AumentarIngresos*empresa.NivelIngresos)
+        max=round(AumentarIngresosmax*empresa.NivelIngresos)
+    elif(round(AumentarIngresos,2)==AumentarIngresosmax):
+        min=round(AumentarIngresosmin*empresa.NivelIngresos)
+        max=round(AumentarIngresos*empresa.NivelIngresos)
+    else:
+        min=round(AumentarIngresos*empresa.NivelIngresos)
+        max=round(AumentarIngresosmax*empresa.NivelIngresos)
 
+    AumentarIngresosMostrarMin=''
+    millones=round(min/1000000)
+    miles=round((min-millones*1000000)/1000)
+    if miles <99:
+        if miles<9:
+            milesS='00'+str(miles)
+        else:
+            milesS='0'+str(miles)
+    else:
+        milesS=str(miles)
+    unidades=round(min-millones*1000000-miles*1000)
+    if (unidades<99):
+        if unidades<9:
+            unidadesS='00'+str(unidades)
+        else:
+            unidadesS='0'+str(unidades)
+    else:
+        unidadesS=str(unidades)
+    
+    if millones>0:
+        AumentarIngresosMostrarMin=str(millones)+'.'+milesS+'.'+unidadesS+' COP'
+    else:
+        if miles>0:
+            AumentarIngresosMostrarMin=str(miles)+'.'+unidadesS+' COP'
+        else:
+            AumentarIngresosMostrarMin=str(unidades)+' COP'
+    
+    AumentarIngresosMostrarMax=''
+    millones=round(max/1000000)
+    miles=round((max-millones*1000000)/1000)
+    if miles <99:
+        if miles<9:
+            milesS='00'+str(miles)
+        else:
+            milesS='0'+str(miles)
+    else:
+        milesS=str(miles)
+    unidades=round(max-millones*1000000-miles*1000)
+    if (unidades<99):
+        if unidades<9:
+            unidadesS='00'+str(unidades)
+        else:
+            unidadesS='0'+str(unidades)
+    else:
+        unidadesS=str(unidades)
+    
+    if millones>0:
+        AumentarIngresosMostrarMax=str(millones)+'.'+milesS+'.'+unidadesS+' COP'
+    else:
+        if miles>0:
+            AumentarIngresosMostrarMax=str(miles)+'.'+unidadesS+' COP'
+        else:
+            AumentarIngresosMostrarMax=str(unidades)+' COP'
+
+    
     context = {
         'Compania':empresa.nombreEmpresa,
         'Actual':round((nivelActual[0]+nivelActual[1]+nivelActual[2])/3,1),
         'Sector':round((Dimension1+Dimension2+Dimension3)/3,1),
-        'Correo':empresa.Correo
+        'Correo':empresa.Correo,
+        'min':AumentarIngresosMostrarMin,
+        'max':AumentarIngresosMostrarMax
 
     }
 
