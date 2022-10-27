@@ -298,10 +298,3 @@ class EmpresasView(View):
             return JsonResponse(list(empresas), safe=False)
         else:
             return JsonResponse({"message": "No hay empresas"}, status=404)
-
-    
-
-
-    return render(request,'paginas/Resultados.html', context=context)
-
-
