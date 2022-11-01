@@ -231,6 +231,24 @@ def resultados(request,NombreCompleto):
     elif round(((nivelActual[0]+nivelActual[1]+nivelActual[2])/3),0)==3:
         mensaje="Su empresa esta cerca a ser un Lider Digital"
 
+    proyecto1=''
+    proyecto2=''
+
+    proyectos=[
+        "Mejorar la Eficiencia Operacional mediante la digitalización de la información de piso planta y la optimización de los procesos",
+        "Aumentar el Run-Time de los activos mediante software y modelos de Analítica Predictiva",
+        "Controlar los procesos productivos mediante la digitalización de los flujos de información del piso planta",
+        "Medir, analizar y optimizar el consumo de servicios públicos",
+        "Generar trazabilidad sobre los lotes de producción para asegurar el cumplimiento de normas y estándares de producción",
+        "Habilitar la producción de productos personalizados ",
+        "Disminuir los inventarios, al implementar un software y modelo tipo Demand-driven Material Requirements Planning",
+        "Eliminar tareas manuales mediante la digitalización de rutinas, formularios o actividades manuales de captura de datos",
+        "Accidentalidad 0.0 con tecnologías 4.0 en los procesos y los diferentes puntos de control de la producción"
+    ]
+
+    proyecto1=proyectos[empresa.reto1-1]
+    proyecto2=proyectos[empresa.reto2-1]
+
     context = {
         'Compania':empresa.nombreEmpresa,
         'Actual':round((nivelActual[0]+nivelActual[1]+nivelActual[2])/3,1),
@@ -238,7 +256,9 @@ def resultados(request,NombreCompleto):
         'Correo':empresa.Correo,
         'min':AumentarIngresosMostrarMin,
         'max':AumentarIngresosMostrarMax,
-        'mensaje':mensaje
+        'mensaje':mensaje,
+        'proyecto1':proyecto1,
+        'proyecto2':proyecto2
 
     }
     return render(request,'paginas/Resultados.html', context=context)

@@ -111,7 +111,7 @@
                        
                 
                     <label>
-                        <input type="radio" name="Dim2P2O3" class="mora" id="Dim2P2O3"/>
+                        <input type="radio" name="Dim2P2O3" class="mora" id="Dim2P2O2"/>
                         <span style="color:#653BBF; bottom: 16px;">2</span>
                         <span class="Textobults">
                             <ul style="margin-left:60px; margin-top: -120px">
@@ -126,7 +126,7 @@
                     <br/>
                     <br/>
                     <label>
-                        <input type="radio" name="Dim2P2O4" class="mora" id="Dim2P2O4"/>
+                        <input type="radio" name="Dim2P2O4" class="mora" id="Dim2P2O3"/>
                         <span style="color:#653BBF;bottom: 16px;">3</span>
                         <span class="Textobults">
                             <ul style="margin-left:60px; margin-top: -50px">
@@ -141,7 +141,7 @@
                     <br/>
                     <br/>
                     <label>
-                        <input type="radio" name="Dim2P2O5" class="mora" id="Dim2P2O5"/>
+                        <input type="radio" name="Dim2P2O5" class="mora" id="Dim2P2O4"/>
                         <span style="color:#653BBF;bottom: 16px;">4</span>
                         <span class="Textobults">
                             <ul style="margin-left:60px; margin-top: -120px">
@@ -170,26 +170,24 @@
         Dimension2R1=0;
         Dimension2R2=0;
 
-        if (document.getElementById('Dimension2P1O1').checked) {
-            Dimension2R1 = 1;
-        }else if (document.getElementById('Dimension2P1O2').checked) {
-            Dimension2R1 = 2;
-        }else if (document.getElementById('Dimension2P1O3').checked) {
-            Dimension2R1 = 3;
-        }else{
-            Dimension2R1 = 4;
+        if (document.getElementById("Dimension2P1O1").checked) {
+            Dimension2R1=1;
+        }else if(document.getElementById("Dimension2P1O2").checked){
+            Dimension2R1=2;
+        }else if(document.getElementById("Dimension2P1O3").checked){
+            Dimension2R1=3;
+        }else if(document.getElementById("Dimension2P1O4").checked){
+            Dimension2R1=4;
         }
 
-        if(document.getElementById('Dim2P2O1').checked){
+        if(document.getElementById("Dim2P2O1").checked){
             Dimension2R2 = 1;
-        }else if(document.getElementById('Dim2P2O2').checked){
+        }else if(document.getElementById("Dim2P2O2").checked){
             Dimension2R2 = 2;
-        }else if(document.getElementById('Dim2P2O3').checked){
+        }else if(document.getElementById("Dim2P2O3").checked){
             Dimension2R2 = 3;
-        }else if(document.getElementById('Dim2P2O4').checked){
+        }else if(document.getElementById("Dim2P2O4").checked){
             Dimension2R2 = 4;
-        }else{
-            Dimension2R2 = 5;
         }
 
         sessionStorage.setItem('Dimension2R1', Dimension2R1);

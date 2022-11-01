@@ -17,8 +17,8 @@ class Empresa(models.Model):
     Telefono = models.CharField(max_length=100,default='Telefono')
     Correo = models.EmailField(max_length=254)
 
-    reto1 = models.CharField(max_length=1000)
-    reto2 = models.CharField(max_length=1000)
+    reto1 = models.PositiveIntegerField(default=1)
+    reto2 = models.PositiveIntegerField(default=2)
 
     Dimension11= models.PositiveIntegerField(default=1)
     Dimension12= models.PositiveIntegerField(default=1)
