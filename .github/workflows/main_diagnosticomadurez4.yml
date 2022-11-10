@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'DiagnosticoMadurez4'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DA7C453E06BE433F8B4AB441F829C449 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BF12749A28084BFC94BFF2CF38AD1EDC }}
