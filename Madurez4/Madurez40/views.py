@@ -8,7 +8,6 @@ from django.template import RequestContext
 from Madurez40.models import Empresa
 from django.http import JsonResponse
 from django.views import View
-import matplotlib.pyplot as plt
 import math
 
 tipo=""
