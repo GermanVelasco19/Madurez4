@@ -368,13 +368,14 @@
   background-image: url('https://media.istockphoto.com/photos/industrial-robot-blueprint-picture-id1220366252?k=20&m=1220366252&s=612x612&w=0&h=MHbJNrOupAvgw-agFwdYCuoA7bxM3UZnat_3DW0WMXQ=');
 background-size: 70% 70%;
 background-repeat: no-repeat;
-height: 700px;
+height: 800px;
 
-background-position: 20px 20px;
+background-position: 70px 70px;
 
 }
-.FondoResultados::before{
-  background-color: rgba(255, 255, 255, 0.2);
+.FondoResultados::after{
+  background-color: rgba(255, 255, 255, 0.5);
+
 }
 
 
@@ -404,8 +405,12 @@ background-position: 20px 20px;
     color: #FF715A;
     font-family: "Inter";
 }
-.tituloResultados{
+.tituloResultados1{
   color: #056CF2;
+    font-family: "Inter";
+}
+.tituloResultados{
+  color: #FF715A;
     font-family: "Inter";
 }
 .btn2{
