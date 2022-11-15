@@ -280,8 +280,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 20px ;
     color: black;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
  
 .tituloPag7{
@@ -365,23 +365,26 @@
 }
 
 .FondoResultados{
-  background-image: url('https://media.istockphoto.com/photos/industrial-robot-blueprint-picture-id1220366252?k=20&m=1220366252&s=612x612&w=0&h=MHbJNrOupAvgw-agFwdYCuoA7bxM3UZnat_3DW0WMXQ=');
+  background-image: url('https://lh3.google.com/u/0/d/1Myt4_l15FN-TkYsmPJ-Hz96lq5PJry8P=w1439-h795-iv1');
 background-size: 80% 50%;
 background-repeat: no-repeat;
 height: 800px;
 
-background-position: 140px 150px;
+background-position: 10px 10px;
 
 }
 .FondoResultados::after{
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.286);
 
 }
+.FondoResultados::before{
+  background-color: rgba(255, 255, 255, 0.608);
+}
 .BoxDuracProyect{
-  background-color: #ebdef0;
-  width: 200px;
-  border: 15px solid #690e90;
-  padding: 50px;
+  background-color: #056cf286;
+  width: 100px;
+  border: 5px solid #056CF2;
+  padding: 20px;
   margin: 20px;
 }
 
