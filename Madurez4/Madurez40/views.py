@@ -221,14 +221,14 @@ def resultados(request,NombreCompleto):
             AumentarIngresosMostrarMax=str(unidades)+' COP'
 
     mensaje=''
-    if round(((nivelActual[0]+nivelActual[1]+nivelActual[2])/3),0)==0:
-        mensaje="Su empresa aún no inicia su transformación digital de operaciones. Las oportunidades y retos son infinitos y es importante comenzar."
-    elif round(((nivelActual[0]+nivelActual[1]+nivelActual[2])/3),0)==1:
-        mensaje="Su empresa esta iniciando su transformación digital de operaciones. Las oportunidades y retos son infinitos y es importante saber priorizar."
-    elif round(((nivelActual[0]+nivelActual[1]+nivelActual[2])/3),0)==2:
-        mensaje="Su empresa esta en proceso de transformación digital de operaciones. Las oportunidades y retos son infinitos y es importante saber priorizar."
-    elif round(((nivelActual[0]+nivelActual[1]+nivelActual[2])/3),0)==3:
-        mensaje="Su empresa esta cerca a ser un Lider Digital"
+    if round(((nivelActual[0]+nivelActual[1]+nivelActual[2])/3),1)<=1.4:
+        mensaje="Usted está iniciando su Transformación Digital de Operaciones. Las oportunidades y retos son casi infinitos y es importante saber priorizar."
+    elif round(((nivelActual[0]+nivelActual[1]+nivelActual[2])/3),0)<=2.5:
+        mensaje="Usted ya ha logrado sus primeros avances en la Transformación Digital de Operaciones. Estos logros iniciales generan validación y justificación de seguir adelante con la Ruta de Transformación."
+    elif round(((nivelActual[0]+nivelActual[1]+nivelActual[2])/3),0)<=3.4:
+        mensaje="Felicitaciones: Usted ya tiene un nivel avanzado en su Transformación Digital de Operaciones. Los retos seguramente estarán en el aprovechamiento de las inversiones realizadas."
+    elif round(((nivelActual[0]+nivelActual[1]+nivelActual[2])/3),0)<=4.0:
+        mensaje="Felicitaciones: Usted es un Líder Digital y pertenece al 2% de las empresas en Colombia que se caracterizan por el dinamismo continuo en sus Transformaciones Empresariales."
 
     proyecto1=''
     proyecto2=''
