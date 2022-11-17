@@ -388,7 +388,6 @@ background-position: 10px 10px;
   padding: 10px;
   margin: 20px;
 }
-
 #Column1Result{
   position: absolute;
   top: 1455px;
@@ -400,6 +399,12 @@ background-position: 10px 10px;
   margin-left: 200px;
   margin-right: 10px;
   margin-top: 10px;
+}
+
+.LogosResultados{
+  background-image: url('https://lh3.google.com/u/0/d/1E9mgxSBdcF2IZ-bXixMGhmGh9GIdFDR6=w1120-h795-iv1');
+  background-size: 80% 50%;
+
 }
 
 
