@@ -390,13 +390,13 @@ background-position: 10px 10px;
 
 #Column1Result{
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 1455px;
+  left: 10px;
   width: 200px;
   margin-top: 10px;
 }
 #Column2Result{
-  margin-left: 500px;
+  margin-left: 200px;
   margin-right: 10px;
   margin-top: 10px;
 }
