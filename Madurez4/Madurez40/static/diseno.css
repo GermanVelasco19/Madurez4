@@ -388,6 +388,19 @@ background-position: 10px 10px;
   margin: 20px;
 }
 
+.Column1Result{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  margin-top: 10px;
+}
+.Column2Result{
+  margin-left: 220px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
 
 .FondoPuntos{
     position: relative;
