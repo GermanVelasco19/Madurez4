@@ -389,16 +389,16 @@ background-position: 10px 10px;
   margin: 0px;
 }
 #Column1Result{
-  position: absolute;
-  top: 1300px;
-  left: 10px;
+  position: relative;
+  top: -60px;
+  left: 200px;
   width: 200px;
-  margin-top: 175px;
+  margin-top: 170px;
 }
 #Column2Result{
   margin-left: 200px;
   margin-right: 10px;
-  margin-top: 55px;
+  margin-top: -300px;
 }
 
 .LogosResultados{
