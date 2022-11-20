@@ -401,6 +401,25 @@ background-position: 10px 10px;
   margin-top: -300px;
 }
 
+table {
+  text-align: left;
+  position: relative;
+  border-collapse: collapse; 
+  background-color: #f6f6f6;
+}/* Spacing */
+td, th {
+  border: 1px solid #999;
+  padding: 20px;
+}
+th {
+  background: brown;
+  color: white;
+  border-radius: 0;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+}
+
 .LogosResultados{
   background-image: url('https://lh3.google.com/u/0/d/1E9mgxSBdcF2IZ-bXixMGhmGh9GIdFDR6=w1120-h795-iv1');
   background-size: 80% 50%;
