@@ -366,7 +366,7 @@
 
 .FondoResultados{
   background-image: url('https://lh3.google.com/u/0/d/1Myt4_l15FN-TkYsmPJ-Hz96lq5PJry8P=w1439-h795-iv1');
-background-size: 80% 50%;
+background-size: 50% 80%;
 background-repeat: no-repeat;
 height: 800px;
 margin-left: -10px ;
@@ -375,11 +375,11 @@ background-position: 10px 10px;
 
 }
 .FondoResultados::after{
-  background-color: rgba(255, 255, 255, 0.11);
+  background-color: rgba(255, 255, 255, 0.74);
 
 }
 .FondoResultados::before{
-  background-color: rgba(255, 255, 255, 0.21);
+  background-color: rgba(246, 239, 239, 0.211);
 }
 .BoxDuracProyect{
   background-color: #056cf286;
@@ -402,17 +402,18 @@ background-position: 10px 10px;
 }
 
 table {
-  text-align: left;
+  text-align: center;
   position: relative;
   border-collapse: collapse; 
   background-color: #f6f6f6;
+  font-size: 15px;
 }/* Spacing */
 td, th {
   border: 1px solid #999;
   padding: 20px;
 }
 th {
-  background: brown;
+  background: #056CF2;
   color: white;
   border-radius: 0;
   position: sticky;
