@@ -381,6 +381,24 @@ background-position: 10px 10px;
 .FondoResultados::before{
   background-color: rgba(246, 239, 239, 0.211);
 }
+.FondoInicInforme{
+  background-image: url('https://lh3.google.com/u/0/d/1Myt4_l15FN-TkYsmPJ-Hz96lq5PJry8P=w1439-h795-iv1');
+  background-size: 50% 80%;
+  background-repeat: no-repeat;
+  height: 800px;
+  margin-left: -10px ;
+  
+  background-position: 10px 10px;
+
+}
+.logoIbisa{
+  background-image: url('https://lh3.google.com/u/0/d/1E9mgxSBdcF2IZ-bXixMGhmGh9GIdFDR6=w1248-h796-iv1');
+ background-size: 80% 80%;
+ background-repeat: no-repeat;
+ background-position: 10px 50px;
+
+}
+
 .BoxDuracProyect{
   background-color: #056cf286;
   width: 100px;
