@@ -64,9 +64,9 @@
 
 }
 .Img1Informe{
-  height: 600px;
+  height: 900px;
     background-image: url("https://lh3.googleusercontent.com/fife/AAbDypC09Iuv6eNFtu5XxlzBnt3oWWgHANoxo_fxFhlxfmJ5G1es_mqJcvijucsz8uJCm3mWyxnnDWcUPPkxmkNqQ9Y-q_JfNh63MzAIm_L4j8xfnkN7fUmAFQTxlWkzAx6suW05XEdhyOEtHsdTsmngG_SLjWVdkzdNsvxSAx4xBA6zWdLmQGyinBT_WwBn7YiOkJFIyJlwCN1I8BUrA7IQEltw9RPlVtJ6fQx-Bntn4e_LdRgtLN6BLp1i_TGedRRoiqM6lYj1hwo7CYyXzXng3sJWVD0gkp_XUtsesbnaIkVc3i6Q-xRT5ssak_rs-tjhMKZLq40SoDMjqOeFvGTvzR8ct9x2iIsWYGOKms4o0NWNLSY0_W_W9yt4sWmbRMOuLDA-EyjvzPy2dGLVz9U8UeUfjNVV8amnbM-REH_L-nSI32r2Rlz73etvDQrgtZLpsLt9IL92Xc88LxOH6jyWeCILfYvchI_Z-6a3pn1asGpnc1GTC4jx301T5TE1aP3nDiCtDbafCSKn284d3EnoMKT--gmBSyLgqB-BaGds_DPInE-CpZdTaqqRkpH80_GkWWvoHYF_FMLFG0I8mRPzD--U7N-KsHTYpbl84wCA75n38gV1I2otsnuJI7mNDEriIS1SLvoWHHiaZJ_21fBL2Cgp6hbgZjTFOzuIB3B75vqhMliM8uC7FZQcjV-KZg7lkaesHc_1yHUceecsmIThvXIfiulmB9HSojhGJjg56tlFqUvhyv95rhr9vDMXcdB_0eW9dSvWyr8aSednuqRp7x7lFG0ExtSl4aEUYAQNX70-RNriiw4GqQdliSYnmSA-s5ubVldT3R9wNh0zMXsDXVV4JZATX8GbtN_oqYhlqR753xbYtcuCWea3YmWN6cSM7cgqWfBk8i6-_tTdI3FmmpL-Ssjn5a5OS8UOt_PGFQHofsUZeZoJHwsAV8Bul062aInJcQzlf0D2HhZV0opABmrFWfaylnjf_jemwsvnUnnHE8D0ZiXM1__zokcsW-xy1tQT3JcoCZfouMqIbuX6GqZA1c1eS9LEhKYX1G49cB9ZUweYSvvmp5Ai6_2MM4dHI2181y7HPKajOjOHUEkaXbndjmK3Tdlm1LCHjRDjs-Lbi2tfGHGTM_tgIXmB7muW2kkGE-kGkGR4IZ7871gOMkah9aPSmuce1PfgHbbChylUxc8bdyH_OnIq3HCRmFs-TrpMr7h0yziglLAqQ1s-2NRBLHsIhTgpYCPZoI7ctZjT8TGMqmHxJdDbenNJ7aItDfyFz5m9_NmsWSEX7KHG_ynFzHJEy_T9wXqRWSwCy91fOnXJsSHssWrxDRQwrpMa5VNyu-rt6P4VONSucanzS5ZsTB82WixhRXy_1IDFGxBTw3qpF9fRN5gdIBjYqt-jqsU9Ub_lr2SpA0f4VqrEYthayUdhAFmFScm6KiUOW7r4xb3rtp2Q9W7QPNNXqwJUOr3r6EYTvvTqh5vxGkE=w1248-h739");
-    background-size: 25% 200%;
+    background-size: 25% 80%;
     background-repeat: no-repeat;
     background-position: 1080px;
     
@@ -127,6 +127,13 @@
     color:black;
     text-align: center;
     padding: 5% 10% !important;
+}
+.TextoB2Informe{
+  font-family: 'Inter', sans-serif;
+  font-size:30px;
+  color:black;
+  text-align: left;
+  padding: 5% 10% !important;
 }
 .BotonSiguiente{
     padding: 10% 30% !important;
