@@ -119,6 +119,14 @@
     text-align: center;
     padding: 0% 10% !important;
 }
+.TextoBinforme{
+  font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    padding: 0% 10% !important;
+
+}
 
 .TextoB2{
     
@@ -130,10 +138,11 @@
 }
 .TextoB2Informe{
   font-family: 'Inter', sans-serif;
-  font-size:30px;
+  font-size:20px;
   color:black;
   text-align: left;
   padding: 5% 10% !important;
+  
 }
 .BotonSiguiente{
     padding: 10% 30% !important;
