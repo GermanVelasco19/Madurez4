@@ -102,7 +102,7 @@ height: 900px;
   background-image: url('https://lh3.googleusercontent.com/fife/AAbDypDbysBlCZJuOsmFyscjeoDG9qk0N6QzJJCzTq9AUGSsNa0jApi0SW63f6X6WhOpvpDB8Dm2Pbb7ZUPtN1TQxnp5DNPVQzlUzVY4zTE9atu8rRyHtQD13f42gYbScs2DxLen3qgqBfEn2hfLvF3IFhcEDneMI4bAKQA5MKLKLMnGDLD6Iz4paTB65FG-6mmNmsdvZ42KxhA_4Q0VeJIvXLCmaWorAExizDPJJHG_gMRtw4_w9OCNTrl3o--ksiTwvXeNjIwvi-ji0CwGjdv4X2CiLaqz41H_8Xp4U9CCfVU2qYIAy47NfajFBqfxtXg2p-l9wTjW-vxyFaIQI27YiDBYWAKyIXUxvVANNrYegPt6ZYYDCgJnfpF4dCTbhUHpSD4yuMRNo3nuqJwJapNpcOu2cbL1vHaP_NyGPmXujtNVw68R8OktOSX2gnZUwsZ7auTvLUoUC1DOS2llueZnklzrRsm5CneDzQBT6kRrRCwYWI61vygS8-p0Cw5HMXyLm7b3-t_9kDt-HcICjtQM7UT0_Dx3pwtctPIm-BLC8jiL8MC0tXkEXBOtgsfOKXzNZOBsFa68bgVvs88UBAwYAv0bYLKUlfGvYyt1R1gXh6lD5YnZmvezkG8F4JnGM18KfjcdCp_xI--wdHHmNKDZ6kol12ETdxHzIofDIm1plSn9U8d2RvpCakZO8aTKeZoYTOGDZHZCA9pg8Roghjf187JNZWoCFUakfRwjTmhc_3208SmZpHdth3dcaH6GWbVJeZ-050Slb8WkPbBDf7skNESxPvqXhEx-o8SQ6MlPWvZas8hh_BUtA8pM8q45nXbkvyjPz0N9lNFKIc-v_DqBzY-QxZj3tGwc3alAt0l0fAaVhUkL64l6FA8OpBsM3yOv-rSBuU10snb205cvoM8OZIDfEq4O-KqzB4nD33gjpFtl-uij9nZr4LqT8uIDDBng-5Q2tHM6Tbei2a93qJSsY0tY5aLlim8jc1pCIhPIZoN82y3bghpFFBUWtdarGmI8jXiln__cW6Hnu4YsLrHqRFsDqi-WQM1rbJpcB9XlGSJeFbJ1u2_ZuGH19_KjsUBnUy7AUjR0-uQS9jPl7IHecPnM46XkZoLPW28vx3cmyWGu8in25qxoXFPnjhV6WfS-_Sn5xCc4O9zLyDsB52c64X2GGISNsbZ8azbimCnJhA3LqRQIWbG5WGKhDyRJ3cOOrr5SSWrDJ7Sn6kZxOUC92YTJYfr_bviL8B26s_KzwZRsltnfrrbxXjYfhZgdNroi0nt8awVEPx3qZcmXPC_q88Ft-zuL-z8wjkFd8X7o-37-_KIHBAVUrADD4f_2FLXXw5UG9Z01_uEnb4mQS_wKUZ4OS6emCrWUvmSuwDQFQwLU0CH7f0tUEKGU7JQzz3-nIVV-rasEAHGGmrXluQ38ZClo5mw_61RC1_Ahf3Uov1t0EltCyVGiP_Qkfg_wylzvml_kXyT2ftwzO--CWpE=w1248-h739');
   background-repeat: no-repeat;
   background-size: 4% 6%;
-height: 900px;
+   height: 950px;
 }
 
 .Img1Informe{
@@ -179,6 +179,14 @@ height: 900px;
 .TextoBinforme{
   font-family: 'Inter', sans-serif;
     font-size: 15px;
+    color: black;
+    text-align: left;
+    padding: 0% 10% !important;
+
+}
+.TextoAinforme{
+  font-family: 'Inter', sans-serif;
+    font-size: 10px;
     color: black;
     text-align: left;
     padding: 0% 10% !important;
