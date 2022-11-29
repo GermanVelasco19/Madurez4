@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
    {%load static %}
@@ -11,10 +12,12 @@
    
     <div id= "FondoInicInforme" class="FondoInicInforme">
         <div  id="TextoInforme" class="TextoInforme">
+            <center>
             <strong>
                 <br/>
                Tranformación Digital de Operaciones      
             </strong>   
+            </center>
         </div> 
     </div>
 
@@ -57,20 +60,20 @@
                     1. ¿Dónde está "{{Nombre_empresa}}" hoy?
                     </strong>
              </p>
-             <p class="TextoBinforme" style="margin-left:-70px;margin-right: 700px ;margin-top: -75px;">
+             <p class="TextoBinforme">
                Su nivel actual de Madurez Digital de Operaciones y sus principales Retos de Negocio
              </p>
 
-             <p class="TextoB2Informe" style="margin-top: -140px;">
-                <strong style="margin-left: 850px;">
+             <p class="TextoB2Informe">
+                <strong>
                     Conclusiones
-                    </strong>
+                </strong>
              </p>
-             <p class="TextoBinforme" style="margin-left:850px;margin-right: -10px ;margin-top: -80px;">
+             <p class="TextoBinforme">
                 "{{Nombre_empresa}}" es una empresa {{tamano}} del sector de {{sector}}
             </p>
-            <div style="margin-top: 10px;" class="TextoBinforme">
-                <ul style="margin-left: 850px; margin-right: -100px; ;">
+            <div >
+                <ul>
                     <li >En comparación con sus pares, "{{Nombre_empresa}}" está un paso atrás de su competencia
                         en Colombia en relación a su Madurez Digital de Operaciones. 
                     </li>
@@ -80,14 +83,14 @@
                 </ul>
             </div>
               <br/>
-            <p class="TextoBinforme" style="margin-left:850px;margin-right: 25px ;margin-top: 1px;">
+            <p class="TextoBinforme" >
                 "{{Nombre_empresa}}" comparte sus principales retos con otras empresas del sector:
             </p>
             <div class="TextoBinforme">
-                <ul style="margin-left: 850px;margin-top: 10px; margin-right: 25px; ;">
-                    <li> Mejorar Eficiencia Operacional en general. 
+                <ul>
+                    <li> {{Reto1}} 
                     </li>
-                    <li > Tener información real (costo unitrio, insumos usados) y trazabilidad del producto para Terceros, Reguladores, Clientes.
+                    <li > {{Reto2}}
                     </li>
                 </ul>
             </div>
@@ -257,6 +260,7 @@
         </div>
         
     </div>
+
     <div class="Tabla4Informe" style="margin-top:-850px; margin-left: 300px;"> <br/> </div>
     
     <div class="Flecha2Informe" style="margin-top:-700px ; margin-left: 20px;"> 
@@ -276,69 +280,71 @@
     </div>
     
     <div style="margin-top: -900px;" class="UltmpgInforme">
-     <p class="TextoB2Informe">
-        <strong style="margin-left: -80px;"> 
-           4. Nuestra Invitación
+        <p class="TextoB2Informe">
+            <strong style="margin-left: -80px;"> 
+                4. Nuestra Invitación
             </strong>
-     </p>
-     <div class="CuadrosInforme"></div>
-     <br/>
-    </div>
+        </p>
+        <div class="CuadrosInforme"></div>
+            <br/>
+        </div>
 
-    <div style=" margin-left:400px; margin-top: -300px">
-    <p class="TextoB2Informe">
-        <strong style="margin-left: -80px;"> 
-           Andrés Pinzón
-            </strong>
-     </p>
-     <P class="TextoA2informe" style="margin-left: -80px; margin-top: -60px;">
-        Market & Partners Manager
-     </P>
-     <p class="TextoB2Informe" style="margin-top:-60px">
-        <strong style="margin-left: -80px;"> 
-           +57 301 622 6375
-            </strong>
-     </p>
-     <P class="TextoA2informe" style="margin-left: -80px;margin-top: -60px;">
-        <u>  Andres.pinzon@ibisa.co</u> 
-     </P>
-     <p class="TextoB2Informe" style="margin-top:-60px">
-        <strong style="margin-left:-80px;"> 
-         www.ibisa.co
-            </strong>
-     </p>
-    </div>
-    <div style=" margin-left:800px; margin-top: -200px">
+        <div style=" margin-left:400px; margin-top: -300px">
+            <p class="TextoB2Informe">
+                <strong style="margin-left: -80px;"> 
+                    Andrés Pinzón
+                </strong>
+            </p>
+            <P class="TextoA2informe" style="margin-left: -80px; margin-top: -60px;">
+                Market & Partners Manager
+            </P>
+            <p class="TextoB2Informe" style="margin-top:-60px">
+                <strong style="margin-left: -80px;"> 
+                    +57 301 622 6375
+                </strong>
+            </p>
+            <P class="TextoA2informe" style="margin-left: -80px;margin-top: -60px;">
+                <u>  Andres.pinzon@ibisa.co</u> 
+            </P>
+            <p class="TextoB2Informe" style="margin-top:-60px">
+                <strong style="margin-left:-80px;"> 
+                    www.ibisa.co
+                </strong>
+            </p>
+        </div>
+        <div style=" margin-left:800px; margin-top: -200px">
        
-        <P class="TextoA2informe" style="margin-left: -80px;">
-            <strong> Pontificia Universidad Javeriana</strong> 
-         </P>
-         <P class="TextoA2informe" style="margin-left: -80px;margin-top: -10px; margin-right: 300px;">
-            Departamento de Ingeniería Industrial Facultad de Ingeniería
-         </P>
-         <P class="TextoA2informe" style="margin-left: -80px;margin-top: -10px;">
-            <strong> Gabriel Zambrano Rey</strong> 
-         </P>
-         <P class="TextoA2informe" style="margin-left: -80px;margin-top: -10px;">
-            +57 1320 8320 ext 5413
-         </P>
+            <P class="TextoA2informe" style="margin-left: -80px;">
+                <strong> Pontificia Universidad Javeriana</strong> 
+            </P>
+            <P class="TextoA2informe" style="margin-left: -80px;margin-top: -10px; margin-right: 300px;">
+                Departamento de Ingeniería Industrial Facultad de Ingeniería
+            </P>
+            <P class="TextoA2informe" style="margin-left: -80px;margin-top: -10px;">
+                <strong> Gabriel Zambrano Rey</strong> 
+            </P>
+            <P class="TextoA2informe" style="margin-left: -80px;margin-top: -10px;">
+                +57 1320 8320 ext 5413
+            </P>
          
-         <P class="TextoA2informe" style="margin-left: -80px;margin-top: -10px;">
-            Edificio Jose Gabriel Maldonado, PISO 3
-         </P>
-    </div>
-    <div style=" margin-left:50px; margin-top: -270px; margin-right: 1070px;">
-        <p class="TextoB2Blanco">
-            <strong>
-            Nos ponemos a su disposición
-        </strong>
-        </p>
-        <p class="TextoA2Blanco">
-             Le invitamos a conocer los casos de éxito de la Transformación Digital de Operaciones de empresas similares a EMPRESA XXX
+            <P class="TextoA2informe" style="margin-left: -80px;margin-top: -10px;">
+                Edificio Jose Gabriel Maldonado, PISO 3
+             </P>
+        </div>
+        <div style=" margin-left:50px; margin-top: -270px; margin-right: 1070px;">
+            <p class="TextoB2Blanco">
+                <strong>
+                    Nos ponemos a su disposición
+                </strong>
+            </p>
+            <p class="TextoA2Blanco">
+                Le invitamos a conocer los casos de éxito de la Transformación Digital de Operaciones de empresas similares a EMPRESA XXX
 
-        </p>
-    </div>
-    <div class="LogoNegro" style="margin-left:420px;margin-top:-150px ;">
-   <br/>
+            </p>
+        </div>
+        <div class="LogoNegro" style="margin-left:420px;margin-top:-150px ;">
+        <br/>
+        </div>
     </div>
     </body>
+</html>

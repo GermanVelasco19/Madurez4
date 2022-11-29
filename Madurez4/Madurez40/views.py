@@ -17,6 +17,15 @@ from reportlab.pdfgen import canvas
 import math
 
 tipo=""
+retos=["Mejorar Eficiencia Operacional en general",
+        "Predicción de eventos críticos o fallas y/o Mantenimiento predictivo",
+        "Tener información del proceso productivo para optimizar la planeación y los niveles de cumplimiento al cliente",
+        "Reducir el consumo de Servicios Públicos: Energia, Agua, Combustible, Gas, etc",
+        "Tener información real (costo unitario, insumos usados) y trazabilidad del producto para Terceros, Reguladores, Clientes",
+        "Poder personalizar el producto final para cada cliente y/o reducir el tamaño mínimo de un lote de producción",
+        "Reducir inventarios de producto final y/o materia prima",
+        "Optimizar el uso del recuso humano, al eliminar tareas de poco valor (Ej.: Digitalización de información, robotización)",
+        "Aumentar los niveles de Seguridad y Salud en el trabajo - Cero Accidentes"]
 
 def inicio(request):
     return render(request, 'paginas/Inicio.html')
@@ -284,6 +293,10 @@ def informe(empresa):
         'Nombre_empresa':empresa.nombreEmpresa,
         'cargo':empresa.Cargo,
         'Nombre_persona':empresa.nombreCompleto,
+        'Reto1':retos[empresa.reto1-1],
+        'Reto2':retos[empresa.reto2-1],
+        'tamano':empresa.tamanodeEmpresa,
+        'sector':empresa.TipodeIndustria
     })
     content=generar_PDF(content)
     message = EmailMultiAlternatives(subject=subject,from_email=settings.EMAIL_HOST_USER, to=[empresa.Correo])
