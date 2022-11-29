@@ -8,6 +8,12 @@ from django.template import RequestContext
 from Madurez40.models import Empresa
 from django.http import JsonResponse
 from django.views import View
+from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import get_template
+from django_xhtml2pdf.utils import pisa
+from io import StringIO
+from reportlab.pdfgen import canvas
 import math
 
 tipo=""
@@ -262,9 +268,29 @@ def resultados(request,NombreCompleto):
         'proyecto2':proyecto2
 
     }
+    informe(empresa)
     return render(request,'paginas/Resultados.html', context=context)
 
-    
+def generar_PDF(html):
+    result=open('informe.pdf','w+b')
+    pisaStatus = pisa.CreatePDF(html, dest=result)
+    result.seek(0)
+    return result.read()
+
+def informe(empresa):
+    subject = 'Informe de Transformación Digital de Operaciones'
+    template = get_template('paginas\Informe.html')
+    content = template.render({
+        'Nombre_empresa':empresa.nombreEmpresa,
+        'cargo':empresa.Cargo,
+        'Nombre_persona':empresa.nombreCompleto,
+    })
+    content=generar_PDF(content)
+    message = EmailMultiAlternatives(subject=subject,from_email=settings.EMAIL_HOST_USER, to=[empresa.Correo])
+    message.attach('informe.pdf',content, 'application/pdf')
+    message.send()
+
+
 
 class EmpresasView(View):
     def get(self, request):
