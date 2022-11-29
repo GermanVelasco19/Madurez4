@@ -282,7 +282,7 @@ def resultados(request,NombreCompleto):
 
 def generar_PDF(html):
     result=open('informe.pdf','w+b')
-    pisaStatus = pisa.CreatePDF(html, dest=result)
+    pisaStatus = pisa.CreatePDF(html, dest=result, encoding='utf-8')
     result.seek(0)
     return result.read()
 
