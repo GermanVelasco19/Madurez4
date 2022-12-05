@@ -75,7 +75,7 @@ class Empresa(models.Model):
         a = Empresa()
         return Empresa
         
-    def create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamanodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,Dimension37,Dimension38,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
+    def create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamanodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario):
         a = Empresa()
         a.nombreCompleto = NombreCompleto
         a.nombreEmpresa = nombreEmpresa
