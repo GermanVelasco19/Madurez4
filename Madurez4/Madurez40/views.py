@@ -254,13 +254,13 @@ def resultados(request,NombreCompleto):
     for i in pares:
         promedioDimension1.append((i.Dimension11+i.Dimension12)/2)
         promedioDimension2.append((i.Dimension21+i.Dimension22)/2)
-        promedioDimension3.append((i.Dimension31+i.Dimension32+i.Dimension33+i.Dimension34+i.Dimension35+i.Dimension36+i.Dimension37+i.Dimension38)/8)
+        promedioDimension3.append((i.Dimension31+i.Dimension32+i.Dimension33+i.Dimension34+i.Dimension35+i.Dimension36)/6)
     
     Dimension1=sum(promedioDimension1)/len(promedioDimension1)
     Dimension2=sum(promedioDimension2)/len(promedioDimension2)
     Dimension3=sum(promedioDimension3)/len(promedioDimension3)
 
-    nivelActual=[(empresa.Dimension11+empresa.Dimension12)/2,(empresa.Dimension21+empresa.Dimension22)/2,(empresa.Dimension31+empresa.Dimension32+empresa.Dimension33+empresa.Dimension34+empresa.Dimension35+empresa.Dimension36+empresa.Dimension37+empresa.Dimension38)/8]
+    nivelActual=[(empresa.Dimension11+empresa.Dimension12)/2,(empresa.Dimension21+empresa.Dimension22)/2,(empresa.Dimension31+empresa.Dimension32+empresa.Dimension33+empresa.Dimension34+empresa.Dimension35+empresa.Dimension36)/6]
     
     ImplementacionEstrategiaTransformacion=[0.03,0.02,0.01,0]
     PlaneacionDeDemanda=[0.1,0.05,0.03,0]
