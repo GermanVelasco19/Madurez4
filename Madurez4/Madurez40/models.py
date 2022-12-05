@@ -32,8 +32,6 @@ class Empresa(models.Model):
     Dimension34= models.PositiveIntegerField(default=1)
     Dimension35= models.PositiveIntegerField(default=1)
     Dimension36= models.PositiveIntegerField(default=1)
-    Dimension37= models.PositiveIntegerField(default=1)
-    Dimension38= models.PositiveIntegerField(default=1)
 
     NivelIngresos= models.FloatField(default=0)
     CostoDirectoComoPorcentaje=models.FloatField(default=0)
@@ -61,8 +59,6 @@ class Empresa(models.Model):
         self.Dimension34 = 1
         self.Dimension35 = 1
         self.Dimension36 = 1
-        self.Dimension37 = 1
-        self.Dimension38 = 1
         self.NivelIngresos = 0
         self.CostoDirectoComoPorcentaje = 0
         self.CostoDirecto = 0
@@ -96,8 +92,6 @@ class Empresa(models.Model):
         a.Dimension34 = Dimension34
         a.Dimension35 = Dimension35
         a.Dimension36 = Dimension36
-        a.Dimension37 = Dimension37
-        a.Dimension38 = Dimension38
         a.NivelIngresos = NivelIngresos
         a.CostoDirectoComoPorcentaje = CostoDirectoComoPorcentaje
         a.CostoDirecto = CostoDirecto
