@@ -25,7 +25,115 @@ retos=["Mejorar Eficiencia Operacional en general",
         "Poder personalizar el producto final para cada cliente y/o reducir el tamaño mínimo de un lote de producción",
         "Reducir inventarios de producto final y/o materia prima",
         "Optimizar el uso del recuso humano, al eliminar tareas de poco valor (Ej.: Digitalización de información, robotización)",
-        "Aumentar los niveles de Seguridad y Salud en el trabajo - Cero Accidentes"]
+        "Aumentar los niveles de Seguridad y Salud en el trabajo - Cero Accidentes"
+        ]
+    
+proyectos=[
+        "Mejorar la Eficiencia Operacional mediante la digitalización de la información de piso planta y la optimización de los procesos",
+        "Aumentar el Run-Time de los activos mediante software y modelos de Analítica Predictiva",
+        "Controlar los procesos productivos mediante la digitalización de los flujos de información del piso planta",
+        "Medir, analizar y optimizar el consumo de servicios públicos",
+        "Generar trazabilidad sobre los lotes de producción para asegurar el cumplimiento de normas y estándares de producción",
+        "Habilitar la producción de productos personalizados ",
+        "Disminuir los inventarios, al implementar un software y modelo tipo Demand-driven Material Requirements Planning",
+        "Eliminar tareas manuales mediante la digitalización de rutinas, formularios o actividades manuales de captura de datos",
+        "Accidentalidad 0.0 con tecnologías 4.0 en los procesos y los diferentes puntos de control de la producción"
+    ]
+
+impactos=[
+        "Aumento OEE",
+        "Reducir occurencia de eventos criticos",
+        "Aumentar niveles de satisfacción y lealdad de clientes",
+        "Ahorro",
+        "Agilizar procesos de inspecciones, auditorias, certificaciones y agilizar eventos del tipo Product recall",
+        "Aumentar Ventas",
+        "Reducir Costo inventario",
+        "Reducir tareas manuales y mano de obra requerida",
+        "Reducir accidentalidad y bajar tasas de ausentismo"
+    ]
+cantidadesImpacto=[
+        "2-5%",
+        "40%",
+        "25%",
+        "10%",
+        "-50%",
+        "5%",
+        "30%",
+        "80%",
+        "15%"
+    ]
+
+duracionesMin=[
+        4,
+        6,
+        6,
+        3,
+        6,
+        9,
+        9,
+        3,
+        6
+    ]
+
+duracionesMax=[
+        6,
+        9,
+        9,
+        4,
+        9,
+        12,
+        12,
+        4,
+        9
+    ]
+
+costosMin=[
+        60,
+        80,
+        120,
+        40,
+        120,
+        240,
+        240,
+        40,
+        80
+    ]
+
+costosMax=[
+        80,
+        120,
+        180,
+        60,
+        180,
+        300,
+        300,
+        60,
+        120
+    ]
+
+amortizacionesMin=[ 
+        6,
+        12,
+        18,
+        6,
+        18,
+        24,
+        24,
+        12,
+        12
+    ]
+
+amortizacionesMax=[
+        9,
+        15,
+        24,
+        9,
+        24,
+        36,
+        36,
+        15,
+        15
+    ]
 
 def inicio(request):
     return render(request, 'paginas/Inicio.html')
@@ -203,10 +311,10 @@ def resultados(request,NombreCompleto):
         unidadesS=str(unidades)
     
     if millones>0:
-        AumentarIngresosMostrarMin=str(millones)+'.'+milesS+'.'+unidadesS+' COP'
+        AumentarIngresosMostrarMin=str(millones)+','+milesS+','+unidadesS+' COP'
     else:
         if miles>0:
-            AumentarIngresosMostrarMin=str(miles)+'.'+unidadesS+' COP'
+            AumentarIngresosMostrarMin=str(miles)+','+unidadesS+' COP'
         else:
             AumentarIngresosMostrarMin=str(unidades)+' COP'
     
@@ -230,10 +338,10 @@ def resultados(request,NombreCompleto):
         unidadesS=str(unidades)
     
     if millones>0:
-        AumentarIngresosMostrarMax=str(millones)+'.'+milesS+'.'+unidadesS+' COP'
+        AumentarIngresosMostrarMax=str(millones)+','+milesS+','+unidadesS+' COP'
     else:
         if miles>0:
-            AumentarIngresosMostrarMax=str(miles)+'.'+unidadesS+' COP'
+            AumentarIngresosMostrarMax=str(miles)+','+unidadesS+' COP'
         else:
             AumentarIngresosMostrarMax=str(unidades)+' COP'
 
@@ -250,20 +358,20 @@ def resultados(request,NombreCompleto):
     proyecto1=''
     proyecto2=''
 
-    proyectos=[
-        "Mejorar la Eficiencia Operacional mediante la digitalización de la información de piso planta y la optimización de los procesos",
-        "Aumentar el Run-Time de los activos mediante software y modelos de Analítica Predictiva",
-        "Controlar los procesos productivos mediante la digitalización de los flujos de información del piso planta",
-        "Medir, analizar y optimizar el consumo de servicios públicos",
-        "Generar trazabilidad sobre los lotes de producción para asegurar el cumplimiento de normas y estándares de producción",
-        "Habilitar la producción de productos personalizados ",
-        "Disminuir los inventarios, al implementar un software y modelo tipo Demand-driven Material Requirements Planning",
-        "Eliminar tareas manuales mediante la digitalización de rutinas, formularios o actividades manuales de captura de datos",
-        "Accidentalidad 0.0 con tecnologías 4.0 en los procesos y los diferentes puntos de control de la producción"
-    ]
-
     proyecto1=proyectos[empresa.reto1-1]
     proyecto2=proyectos[empresa.reto2-1]
+
+    proy=empresa.reto1-1
+    impacto=impactos[proy]
+    cantImpacto=cantidadesImpacto[proy]
+    duracionMin=duracionesMin[proy]
+    duracionMax=duracionesMax[proy]
+    costoMin=costosMin[proy]
+    costoMax=costosMax[proy]
+    amortizacionMin=amortizacionesMin[proy]
+    amortizacionMax=amortizacionesMax[proy]
+
+    ParesConMismoReto=len(Empresa.objects.filter(reto1=empresa.reto1))/len(Empresa.objects.all())
 
     context = {
         'Compania':empresa.nombreEmpresa,
@@ -274,19 +382,29 @@ def resultados(request,NombreCompleto):
         'max':AumentarIngresosMostrarMax,
         'mensaje':mensaje,
         'proyecto1':proyecto1,
-        'proyecto2':proyecto2
-
+        'proyecto2':proyecto2,
+        'impacto':impacto,
+        'cantImpacto':cantImpacto,
+        'minDuracion':duracionMin,
+        'maxDuracion':duracionMax,
+        'minCosto':costoMin,
+        'maxCosto':costoMax,
+        'minAmortizacion':amortizacionMin,
+        'maxAmortizacion':amortizacionMax
     }
-    informe(empresa)
+
+    informe(empresa,ParesConMismoReto)
     return render(request,'paginas/Resultados.html', context=context)
 
 def generar_PDF(html):
     result=open('informe.pdf','w+b')
     pisaStatus = pisa.CreatePDF(html, dest=result, encoding='utf-8')
     result.seek(0)
-    return result.read()
+    pdf = result.read()
+    result.close()
+    return pdf
 
-def informe(empresa):
+def informe(empresa,ParesConMismoReto):
     subject = 'Informe de Transformación Digital de Operaciones'
     template = get_template('paginas\Informe.html')
     content = template.render({
@@ -296,7 +414,8 @@ def informe(empresa):
         'Reto1':retos[empresa.reto1-1],
         'Reto2':retos[empresa.reto2-1],
         'tamano':empresa.tamanodeEmpresa,
-        'sector':empresa.TipodeIndustria
+        'sector':empresa.TipodeIndustria,
+        'MismoReto':ParesConMismoReto*100
     })
     content=generar_PDF(content)
     message = EmailMultiAlternatives(subject=subject,from_email=settings.EMAIL_HOST_USER, to=[empresa.Correo])
