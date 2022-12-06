@@ -391,9 +391,10 @@ def resultados(request,NombreCompleto):
         'maxCosto':costoMax,
         'minAmortizacion':amortizacionMin,
         'maxAmortizacion':amortizacionMax
-    }
+    } 
 
-    informe(empresa,ParesConMismoReto)
+
+    informe(empresa)
     return render(request,'paginas/Resultados.html', context=context)
 
 def generar_PDF(html):
@@ -404,7 +405,7 @@ def generar_PDF(html):
     result.close()
     return pdf
 
-def Informe(empresa,ParesConMismoReto):
+def Informe(empresa):
     subject = 'Informe de Transformación Digital de Operaciones'
     template = get_template('paginas\Informe.html')
     content = template.render({
@@ -415,7 +416,7 @@ def Informe(empresa,ParesConMismoReto):
         'Reto2':retos[empresa.reto2-1],
         'tamano':empresa.tamanodeEmpresa,
         'sector':empresa.TipodeIndustria,
-        'MismoReto':ParesConMismoReto*100
+        'MismoReto':2*100
     })
     content=generar_PDF(content)
     message = EmailMultiAlternatives(subject=subject,from_email=settings.EMAIL_HOST_USER, to=[empresa.Correo])
