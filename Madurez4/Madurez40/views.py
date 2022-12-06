@@ -394,7 +394,7 @@ def resultados(request,NombreCompleto):
     } 
     
 
-    informe(empresa,ParesConMismoReto)
+    Informe(empresa,ParesConMismoReto)
     return render(request,'paginas/Resultados.html', context=context)
 
 def generar_PDF(html):
