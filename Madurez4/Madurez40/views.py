@@ -231,7 +231,7 @@ def Resultados(request,NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañ
    
     empresa=Empresa.create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario)
     return resultados(request,NombreCompleto)
-def Informe(request):
+def informe(request):
     return render(request, 'paginas/Informe.html')
     
 
@@ -404,7 +404,7 @@ def generar_PDF(html):
     result.close()
     return pdf
 
-def informe(empresa,ParesConMismoReto):
+def Informe(empresa,ParesConMismoReto):
     subject = 'Informe de Transformación Digital de Operaciones'
     template = get_template('paginas\Informe.html')
     content = template.render({
