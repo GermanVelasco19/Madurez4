@@ -408,7 +408,7 @@ def generar_PDF(html):
 
 def Informe(empresa,ParesConMismoReto):
     subject = 'Informe de Transformación Digital de Operaciones'
-    template = get_template('paginas\Informe.html')
+    template = get_template('paginas/Informe.html')
     content = template.render({
         'Nombre_empresa':empresa.nombreEmpresa,
         'cargo':empresa.Cargo,
