@@ -9,11 +9,11 @@ class Dimension(models.IntegerChoices):
     cuarto=4,'4',
 
 class Empresa(models.Model):
-    nombreCompleto = models.CharField(max_length=500, primary_key=True)
-    nombreEmpresa = models.CharField(max_length=500)
-    Cargo = models.CharField(max_length=500)
-    TipodeIndustria = models.CharField(max_length=500,default='Industria')
-    tamanodeEmpresa = models.CharField(max_length=500,default='Tamaño de la empresa')
+    nombreCompleto = models.CharField(max_length=100, primary_key=True)
+    nombreEmpresa = models.CharField(max_length=100)
+    Cargo = models.CharField(max_length=100)
+    TipodeIndustria = models.CharField(max_length=100,default='Industria')
+    tamanodeEmpresa = models.CharField(max_length=100,default='Tamaño de la empresa')
     Telefono = models.CharField(max_length=100,default='Telefono')
     Correo = models.EmailField(max_length=254)
 
@@ -66,8 +66,8 @@ class Empresa(models.Model):
 
         return self
     
-    def create():
-        a = Empresa._init_()
+    def create():  # type: ignore
+        a = Empresa._init_()  # type: ignore
         a = Empresa()
         return Empresa
         

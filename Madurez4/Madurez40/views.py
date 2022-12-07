@@ -1,5 +1,5 @@
 from decimal import Context
-from multiprocessing import context
+from multiprocessing import context  # type: ignore
 from urllib.request import Request
 from xml.dom.minidom import Document
 from django.shortcuts import render
@@ -231,11 +231,12 @@ def Resultados(request,NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañ
    
     empresa=Empresa.create(NombreCompleto,nombreEmpresa,Cargo,TipodeIndustria,tamañodeEmpresa,Telefono,Correo,reto1,reto2,Dimension11,Dimension12,Dimension21,Dimension22,Dimension31,Dimension32,Dimension33,Dimension34,Dimension35,Dimension36,NivelIngresos,CostoDirectoComoPorcentaje,CostoDirecto,valorInventario)
     return resultados(request,NombreCompleto)
+    
 def informe(request):
     return render(request, 'paginas/Informe.html')
     
 
-class EmpresasView(View):
+class EmpresasView(View):  # type: ignore
     def get(self, request):
         empresas = Empresa.objects.values()
         if len(empresas) > 0:
@@ -407,7 +408,7 @@ def generar_PDF(html):
 
 def Informe(empresa,ParesConMismoReto):
     subject = 'Informe de Transformación Digital de Operaciones'
-    template = get_template('paginas/Informe.html')
+    template = get_template('paginas\Informe.html')
     content = template.render({
         'Nombre_empresa':empresa.nombreEmpresa,
         'cargo':empresa.Cargo,
