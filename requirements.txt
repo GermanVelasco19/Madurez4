@@ -1,4 +1,4 @@
-django==4.1
+django==3.2.16
 pip==22.3
 django-excel==0.0.10
 djangorestframework==3.14.0
