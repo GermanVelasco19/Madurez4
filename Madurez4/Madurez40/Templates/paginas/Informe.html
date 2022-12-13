@@ -230,8 +230,7 @@
             text-align: left;
             padding: 5% 10% !important;margin-left: 45% ;margin-top: -10%;">
                 <ul>
-                    <li >En comparación con sus pares, "{{Nombre_empresa}}" está un paso atrás de su competencia
-                        en Colombia en relación a su Madurez Digital de Operaciones. 
+                    <li >En comparación con sus pares, "{{Nombre_empresa}}" {{texto}}
                     </li>
                     <li > La modernización de la tecnología habilitante de sus procesos productivos
                         presenta grandes oportunidades y necesidades de modernización. 
@@ -254,21 +253,21 @@
             <div style="margin-left:1150px; margin-right: -10px; margin-top: -10%;">
             <p class="TextoBinforme">
                 <strong>
-                    {{MismoReto}}% de empresas con el mismo reto:
+                    % de empresas con el mismo reto:
 
                 </strong>
             </p>
             <br/>
             <p class="TextoBinforme">
                 <strong>
-                    VARIABLE1 %
+                    {{MismoReto1}} %
 
                 </strong>
             </p>
             <br/>
             <p class="TextoBinforme">
                 <strong>
-                   VARIABLE2 %
+                    {{MismoReto2}} %
 
                 </strong>
             </p>
@@ -394,6 +393,7 @@
         padding: 0% 10% !important;margin-left:450px ;margin-top: -610px;">
             <strong>
             Tipo de potencial   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Rango en %   &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;      Rango en COP: COP a COP por año
+            {{Impacto}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   {{minRango}}-{{maxRango}} &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  {{minCOP}}-{{maxCop}}
             </strong>
         </p>
         <p style="font-family: 'Inter', sans-serif;
@@ -454,7 +454,7 @@
                 <br/>
                 <br/>
                 <li > 
-                    Para ilustrarlo frente al Reto de Negocio #1: "Mejorar Eficiencia Operacional en general"
+                    Para ilustrarlo frente al Reto de Negocio #1: {{Reto1}}
                 </li>
             </ul>
         </div>
@@ -478,7 +478,8 @@
             color: black;
             text-align: left;
             padding: 0% 10% !important;margin-left:600px ;margin-top: -70px; margin-right:100px;">
-                Mejorar la Eficiencia operacional mediante la digitalización de la información del piso de planta.
+                {{proyecto1}}
+                {{Imagenproyecto1}}
         
             </p>
             <p style="font-family: 'Inter', sans-serif;
