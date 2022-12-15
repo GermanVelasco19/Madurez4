@@ -12,7 +12,6 @@ from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django_xhtml2pdf.utils import pisa
-from io import StringIO
 from reportlab.pdfgen import canvas
 import math
 
