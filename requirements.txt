@@ -3,3 +3,4 @@ pip==21.3.1
 django-excel==0.0.10
 djangorestframework==3.14.0
 django_xhtml2pdf
+reportlab
