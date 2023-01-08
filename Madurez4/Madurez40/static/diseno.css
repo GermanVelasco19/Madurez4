@@ -44,17 +44,18 @@
 }
 
 .ImagendeMarca{
-    height: 600px;
+    height: 200px;
     background-image: url("https://lh3.google.com/u/0/d/11jhMyFy2o-85SA_iIOO8KqjetYDvMkrT=w1230-h739-iv1");
-    background-size: cover;
+    background-size: 200px;
     background-repeat: no-repeat;
+    background-position: 20% 40%;
 }
 .TextoDiagnostico{
     
     text-align: right !important;
     
     font-family: 'Inter', sans-serif;
-    font-size: 40px;
+    font-size: 200%;
 }
 .TextoInforme{
    
