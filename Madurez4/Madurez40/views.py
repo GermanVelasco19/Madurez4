@@ -12,7 +12,6 @@ from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django_xhtml2pdf.utils import pisa
-from io import StringIO
 from reportlab.pdfgen import canvas
 import math
 
@@ -288,6 +287,8 @@ def resultados(request,NombreCompleto):
         max=AumentarIngresos+(0.1*AumentarIngresos)
     else:
         max= AumentarIngresosmax
+    minRango=round(min*100)
+    maxRango=round(max*100)
 
     min=min*empresa.NivelIngresos
     max=max*empresa.NivelIngresos
@@ -373,6 +374,7 @@ def resultados(request,NombreCompleto):
     amortizacionMax=amortizacionesMax[proy]
 
     ParesConMismoReto=len(Empresa.objects.filter(reto1=empresa.reto1))/len(Empresa.objects.all())
+    ParesConMismoReto2=len(Empresa.objects.filter(reto2=empresa.reto2))/len(Empresa.objects.all())
 
     context = {
         'Compania':empresa.nombreEmpresa,
@@ -393,9 +395,15 @@ def resultados(request,NombreCompleto):
         'minAmortizacion':amortizacionMin,
         'maxAmortizacion':amortizacionMax
     } 
-    
+    comparacion=0
+    if (round((nivelActual[0]+nivelActual[1]+nivelActual[2])/3,1)==round((Dimension1+Dimension2+Dimension3)/3,1)):
+        comparacion=0
+    elif (round((nivelActual[0]+nivelActual[1]+nivelActual[2])/3,1)>round((Dimension1+Dimension2+Dimension3)/3,1)):
+        comparacion=1
+    else:
+        comparacion=-1
 
-    Informe(empresa,ParesConMismoReto)
+    Informe(empresa,ParesConMismoReto,ParesConMismoReto2,comparacion,AumentarIngresosMostrarMin,AumentarIngresosMostrarMax,minRango,maxRango)
     return render(request,'paginas/Resultados.html', context=context)
 
 def generar_PDF(html):
@@ -406,9 +414,21 @@ def generar_PDF(html):
     result.close()
     return pdf
 
-def Informe(empresa,ParesConMismoReto):
+def Informe(empresa,ParesConMismoReto,ParesConMismoReto2,comparacion,min,max,minRango,maxRango):
     subject = 'Informe de Transformación Digital de Operaciones'
+    proyecto1=proyectos[empresa.reto1-1]
+    proyecto2=proyectos[empresa.reto2-1]
     template = get_template('paginas/Informe.html')
+
+    texto = ''
+
+    if comparacion == 1:
+        texto = ' está por delante de su competencia en Colombia en relación a su Madurez Digital de Operaciones.'
+    elif comparacion == -1:
+        texto = ' está un paso atrás de su competencia en Colombia en relación a su Madurez Digital de Operaciones.'
+    elif comparacion == 0:
+        texto = ' está a la par con su competencia en Colombia en relación a la Madurez Digital de sus Operaciones.'
+
     content = template.render({
         'Nombre_empresa':empresa.nombreEmpresa,
         'cargo':empresa.Cargo,
@@ -417,10 +437,32 @@ def Informe(empresa,ParesConMismoReto):
         'Reto2':retos[empresa.reto2-1],
         'tamano':empresa.tamanodeEmpresa,
         'sector':empresa.TipodeIndustria,
-        'MismoReto':ParesConMismoReto*100
+        'MismoReto1':ParesConMismoReto*100,
+        'MismoReto2':ParesConMismoReto2*100,
+        'texto': texto,
+        'minCOP':min,
+        'maxCOP':max,
+        'Impacto':'Aumentar ingresos',
+        'minRango': minRango,
+        'maxRango': maxRango,
+        'proyecto1':proyecto1,
+        'proyecto2':proyecto2
     })
+    mensaje = '''Buen día {},
+    <br><br>
+
+Nos complace saber que Usted realizó el Auto-Diagnostico sobre el nivel de Madurez Digital en sus Operaciones. Adjuntamos un informe con los resultados de su empresas y con unas ideas y sugerencias para seguir adelante con la Transformación Digital. 
+<br><br>
+El informe tiene una evaluación comparativa de la situación actual de su empresas, las sugerencias para seguir adelante con la Digitalización de sus Operaciones, y algo muy importante: Una estimación de los potenciales beneficios para su empresa de la Digitalización de Operaciones.
+<br><br>
+Sería un gusto para nosotros poder profundizar y discutir estos resultados personalmente. Estamos a su disposición y quedamos atentos, cordial saludo
+<br><br>
+<br><br>
+Andres Pinzón
+'''.format(empresa.nombreCompleto)
     content=generar_PDF(content)
     message = EmailMultiAlternatives(subject=subject,from_email=settings.EMAIL_HOST_USER, to=[empresa.Correo])
+    message.attach_alternative(mensaje, 'text/html')
     message.attach('informe.pdf',content, 'application/pdf')
     message.send()
 
