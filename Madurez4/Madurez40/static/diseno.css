@@ -44,18 +44,20 @@
 }
 
 .ImagendeMarca{
-    height: 200px;
+   
     background-image: url("https://lh3.google.com/u/0/d/11jhMyFy2o-85SA_iIOO8KqjetYDvMkrT=w1230-h739-iv1");
-    background-size: 200px;
+    background-size: 100% 120%;
     background-repeat: no-repeat;
-    background-position: 20% 40%;
+    background-position: 40% 1%;
+    height: 600px;
+  
 }
 .TextoDiagnostico{
     
     text-align: right !important;
-    
     font-family: 'Inter', sans-serif;
-    font-size: 200%;
+    font-size: 220%;
+    margin-left: 40%;
 }
 .TextoInforme{
    
@@ -575,6 +577,12 @@ th {
   position: sticky;
   top: 0;
   padding: 10px;
+}
+caption{
+  color:#056CF2;
+  position: center;
+  font-weight: bold;
+  font-size: 150%;
 }
 
 .LogosResultados{
