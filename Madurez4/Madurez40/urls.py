@@ -20,7 +20,6 @@ urlpatterns = [
     path('Resultados/<str:NombreCompleto>/<str:nombreEmpresa>/<str:Cargo>/<str:TipodeIndustria>/<str:tamañodeEmpresa>/<str:Telefono>/<str:Correo>/<str:reto1>/<str:reto2>/<str:Dimension11>/<str:Dimension12>/<str:Dimension21>/<str:Dimension22>/<str:Dimension31>/<str:Dimension32>/<str:Dimension33>/<str:Dimension34>/<str:Dimension35>/<str:Dimension36>/<str:NivelIngresos>/<str:CostoDirectoComoPorcentaje>/<str:CostoDirecto>/<str:valorInventario>/', views.Resultados, name='Resultados'),
     path('Empresas/', views.EmpresasView.as_view(), name='Empresas'),
     path('resultados/<str:NombreCompleto>',views.resultados, name='resultados'),
-    path('Informe/', views.Informe, name='Informe'),
 ]
 
 
