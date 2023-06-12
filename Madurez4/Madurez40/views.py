@@ -364,14 +364,31 @@ def resultados(request,NombreCompleto):
     proyecto2=proyectos[empresa.reto2-1]
 
     proy=empresa.reto1-1
+    proy2=empresa.reto2-1
+
     impacto=impactos[proy]
+    impacto2=impactos[proy2]
+
     cantImpacto=cantidadesImpacto[proy]
+    cantImpacto2=cantidadesImpacto[proy2]
+
     duracionMin=duracionesMin[proy]
     duracionMax=duracionesMax[proy]
+
+    duracionMin2=duracionesMin[proy2]
+    duracionMax2=duracionesMax[proy2]
+
     costoMin=costosMin[proy]
     costoMax=costosMax[proy]
+
+    costoMin2=costosMin[proy2]
+    costoMax2=costosMax[proy2]
+
     amortizacionMin=amortizacionesMin[proy]
     amortizacionMax=amortizacionesMax[proy]
+
+    amortizacionMin2=amortizacionesMin[proy2]
+    amortizacionMax2=amortizacionesMax[proy2]
 
     ParesConMismoReto=len(Empresa.objects.filter(reto1=empresa.reto1))/len(Empresa.objects.all())
     ParesConMismoReto2=len(Empresa.objects.filter(reto2=empresa.reto2))/len(Empresa.objects.all())
@@ -387,13 +404,20 @@ def resultados(request,NombreCompleto):
         'proyecto1':proyecto1,
         'proyecto2':proyecto2,
         'impacto':impacto,
+        'impacto2':impacto2,
         'cantImpacto':cantImpacto,
         'minDuracion':duracionMin,
+        'minDuracion2':duracionMin2,
         'maxDuracion':duracionMax,
+        'maxDuracion':duracionMax2,
         'minCosto':costoMin,
+        'minCosto2':costoMin2,
         'maxCosto':costoMax,
+        'maxCosto2':costoMax2,
         'minAmortizacion':amortizacionMin,
-        'maxAmortizacion':amortizacionMax
+        'minAmortizacion2':amortizacionMin2,
+        'maxAmortizacion':amortizacionMax,
+        'maxAmortizacion2':amortizacionMax2
     } 
     comparacion=0
     if (round((nivelActual[0]+nivelActual[1]+nivelActual[2])/3,1)==round((Dimension1+Dimension2+Dimension3)/3,1)):
